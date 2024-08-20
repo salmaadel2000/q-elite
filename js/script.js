@@ -59,3 +59,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+
+function toggleCollapse(button) {
+    const isExpanded = button.getAttribute('aria-expanded') === 'true';
+    const img = document.getElementById('toggleImage');
+    const img2 = document.getElementById('toggleImage2');
+    if (isExpanded) {
+        button.setAttribute('aria-expanded', 'false');
+        img.src = './assets/images/chevron-up.png'; // Image when collapsed
+        img2.src='./assets/images/chevron-up.png';
+    } else {
+        button.setAttribute('aria-expanded', 'true');
+        img.src = './assets/images/chevron-down.png';  // Image when expanded
+        img2.src='./assets/images/chevron-down.png';
+    }
+}

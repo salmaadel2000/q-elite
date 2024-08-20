@@ -116,17 +116,14 @@ body {
 
             li {
                 width: 95%;
-
+               
                 .links {
                     margin-block: 4px; // Vertical margin for links
                     padding: 10px 16px;
-
                     &:hover {
                         background-color: $dark-green; // Change background on hover
                         color: white !important; // Change text color to white
                         border-radius: 8px; // Rounded corners
-                        padding: 10px, 16px, 10px, 16px; // Padding around the link
-
                         .icon-sidebar {
                             color: white !important; // Change icon color on hover
                         }
@@ -138,6 +135,9 @@ body {
                     }
                 }
 
+            }
+            .close-li{
+                padding: 10px 16px;
             }
         }
 
@@ -160,16 +160,6 @@ body {
             margin-inline-start: 13px; // Space to the left of the close button
         }
 
-        .right-menue {
-
-            .dropdown-item {
-                &:active {
-                    color: $dark-green; // Change color when active
-                    background-color: transparent; // Transparent background when active
-                }
-            }
-        }
-
         .nav-item {
             .icon-sidebar {
                 padding: 10px; // Padding for sidebar icons
@@ -179,11 +169,6 @@ body {
             .drop-img {
                 @include flex-container(space-between, center); // Space between items and center vertically
                 width: 90%; // Set width for drop-img
-
-                &:active {
-                    background-color: #DFFFE6; // Change background color when active
-                    color: $dark-green !important; // Change text color when active
-                }
             }
 
             .collapse {
@@ -212,6 +197,36 @@ body {
                     }
                 }
             }
+
+            .hover-content {
+                display: none; // Initially hidden
+                 border-radius: 8px;
+                &.card-hover {
+                    border: none;
+                    text-align: start;
+
+                    .dropdown-item {
+                        color: black;
+                        font-size: .9375rem;
+
+                        &:hover {
+                            color: $dark-green;
+                            background-color: transparent;
+                        }
+
+                        &:active {
+                            background-color: transparent;
+                            color: $dark-green;
+                        }
+
+                        &:focus {
+                            background-color: transparent;
+                            color: $dark-green;
+                        }
+                    }
+                }
+            }
+
         }
 
         .custom-button {
@@ -246,7 +261,6 @@ body {
             width: 90px !important; // Set width when sidebar is collapsed
 
             .links {
-                padding: 0px;
                 .icon-sidebar {
                     color: $light-gray; // Change icon color in collapsed state
 
@@ -256,20 +270,31 @@ body {
                 }
             }
 
-            .right-menue {
-                right: 100%;
-                top: 0;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-                position: absolute;
-            }
             .sidebar-ul {
-                    .nav-item {
-                        width: 76%;
-                        .collapse , .card {
-                            display: none !important;
-                        }
+                .nav-item {
+                    width: 76%;
+
+                    .collapse,
+                    .card {
+                        display: none !important;
                     }
-                
+
+                    .hover-content {
+                        position: absolute;
+                        right: 100%; // Adjust position to the right of the collapsed sidebar
+                        top: 0;
+                        display: none;
+                        width: 200px; // Adjust width as needed
+                        z-index: 10; // Ensure it appears above other content
+                        background-color: $background-content; // Same background as content
+                        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Add shadow
+                    }
+
+                    &:hover .hover-content {
+                        display: block; // Show on hover when sidebar is collapsed
+                    }
+                }
+
             }
         }
     }
@@ -294,84 +319,67 @@ body {
 
 @media (max-width:1200px) {
     .parent {
-        .sidebar {
-            width: 40%;
-
-            .nav-link {
-                font-size: 14px;
-            }
-
-            .custom-button {
-                padding: 11px 17px;
-
-            }
-        }
-    }
-}
-
-@media (max-width:1200px) {
-    .parent {
         flex-direction: column;
 
         .sidebar {
-            height: 280px !important;
+            height: 220px !important;
             width: 100% !important;
             align-items: flex-start;
-
-            .sidebar-ul {
-                li {
-                    width: 98%;
-                    height: 47px;
-                }
-
-                .nav-item {
-                    .nav-link {
-                        padding: 0px;
-                    }
-                }
+            .close-img{
+                transform: rotate(271deg);
             }
-
             &.collapsed {
                 width: 100% !important; // Set width when sidebar is collapsed
-               height: 219px !important;
+                height: 100px !important;
 
                 .sidebar-ul {
                     flex-direction: row !important;
 
-                    li {
-                        width: 10%;
+                    .nav-item {
+                        width: 33%;
+                        @include flex-container(center,center);
+                        .card-hover{
+                            right: 0%;
+                            top: 50px;
+                            z-index: 1;
+                        }
+                        .links{
+                            padding: 5px 10px;
+                        }
+                    }
+                    .close-img{
+                        transform: rotate(89deg);
                     }
                 }
-
-                .right-menue {
-                    right: -114%;
-                    top: 44px;
-
-                }
-
             }
 
             .custom-button {
                 margin-inline-start: 20px;
             }
 
-            .links {
-                margin-block: 0px;
-            }
-
-            .nav-item {
-                .close-img {
-                    transform: rotate(-91deg);
+            .sidebar-ul {
+                flex-direction: row !important;
+                justify-content: space-around;
+                .nav-item {
+                    width: 30%;
                 }
-
+               
             }
-
-            .right-menue {
-                width: 48%;
-                right: 52%;
-            }
-
         }
 
+    }
+}
+
+@media (max-width:650px) {
+    .parent{
+        .sidebar{
+            height: 300px !important;
+            .sidebar-ul{
+                flex-direction: column !important;
+                .nav-item{
+                    width: 100%;
+                }
+            }
+        }
     }
 }

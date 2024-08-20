@@ -65,7 +65,7 @@
             <div id="sidebar" class="sidebar text-muted ">
                 <ul class="nav flex-column sidebar-ul">
                     <!-- Sidebar Toggle Button -->
-                    <li class="toggle nav-item dropdown" id="toggleSidebar">
+                    <li class="toggle nav-item dropdown close-li" id="toggleSidebar">
                         <div class="main d-flex align-items-center">
                             <img src="./assets/images/12.png" class="icon-sidebar close-img" />
                             <div class="nav-close">
@@ -76,12 +76,15 @@
                     <!-- Sidebar Menu Items -->
                     <li class="nav-item dropdown">
                         <div class="main d-flex align-items-center links" data-bs-toggle="collapse" data-bs-target="#collapseExample"
-                            role="button" aria-expanded="false" aria-controls="collapseExample">
+                            role="button" aria-expanded="false" aria-controls="collapseExample" onclick="toggleCollapse(this)">
                             <i class="fa-solid fa-box icon-sidebar"></i>
                             <div class="drop-img unvisable">
                                 <a class="nav-link" href="#" data-page="صادر">البريد</a>
-                                <img src="./assets/images/chevron-down.png" class="toggle-collapse" />
+                                <img src="./assets/images/chevron-down.png" class="toggle-collapse" id="toggleImage" />
                             </div>
+                        </div>
+                        <div class="hover-content card-hover card-body">
+                            <a class="dropdown-item" href="#">الترقيات</a>
                         </div>
                         <div class="collapse" id="collapseExample">
                             <div class="card card-body">
@@ -90,16 +93,26 @@
                         </div>
                     </li>
                     
+                    
                     <li class="nav-item dropdown">
-                        <div class="main d-flex align-items-center links" data-bs-toggle="collapse" data-bs-target="#collapseHR" role="button" aria-expanded="false" aria-controls="collapseHR">
+                        <div class="main d-flex align-items-center links" onclick="toggleCollapse(this)" data-bs-toggle="collapse" data-bs-target="#collapseHR" role="button" aria-expanded="false" aria-controls="collapseHR">
                             <i class="fa-solid fa-bag-shopping icon-sidebar"></i>
                             <div class="drop-img unvisable">
                                 <a class="nav-link" href="#" data-page="الموارد البشرية">الموارد البشرية</a>
-                                <img src="./assets/images/chevron-down.png" class="toggle-collapse" />
+                                <img src="./assets/images/chevron-down.png" class="toggle-collapse" id="toggleImage2"/>
                             </div>
+                        </div>
+                        <div class="hover-content card-hover card-body">
+                            <a class="dropdown-item" href="#">الترقيات</a>
+                            <a class="dropdown-item" href="#">الترقيات</a>
+                            <a class="dropdown-item" href="#">الترقيات</a>
+                            <a class="dropdown-item" href="#">الترقيات</a>
                         </div>
                         <div class="collapse" id="collapseHR">
                             <div class="card card-body">
+                                <a class="dropdown-item" href="#">الترقيات</a>
+                                <a class="dropdown-item" href="#">الترقيات</a>
+                                <a class="dropdown-item" href="#">الترقيات</a>
                                 <a class="dropdown-item" href="#">الترقيات</a>
                             </div>
                         </div>

@@ -90,7 +90,7 @@
                     background-color: white;
                     @include flex-container(space-evenly, center);
                     border: 0.8px solid #EEEEEE;
-                    padding: 8px 10px;
+                    padding: 7px 10px;
                     border-radius: 5px;
                     width: 84%;
 
@@ -700,7 +700,7 @@
                 .tabs-container {
                     .tab-content {
                         .tab-pane {
-                            max-height: fit-content;
+                           
                             padding: 0px;
 
                             .tab-item {
@@ -735,11 +735,6 @@
                 }
             }
 
-            .transactions-section {
-                .transaction-list {
-                    max-height: fit-content;
-                }
-            }
         }
     }
 }

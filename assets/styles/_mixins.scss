@@ -3,4 +3,6 @@
     justify-content: $justify-content;
     align-items: $align-items;
   }
-  
+  @mixin box-shadow($h-offset, $v-offset, $blur, $spread, $color1, $color2) {
+    box-shadow: $h-offset $v-offset $blur $spread $color1, $color2;
+}
