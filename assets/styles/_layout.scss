@@ -1,0 +1,377 @@
+body {
+    font-family: 'Almarai', sans-serif; // Set the global font family
+}
+
+.header {
+    @include flex-container(flex-end, center); // Align items to the flex-end horizontally and center vertically
+    background-color: $background-color; // Use the background color variable
+
+    .date {
+        color: $gray; // Set text color for date
+        font-size: 13px; // Set font size
+        font-weight: 400; // Set font weight
+
+        .item {
+            margin-inline: 6px; // Set margin inline (left/right) for spacing
+            height: 17px; // Set fixed height
+        }
+    }
+}
+
+.navbar {
+    box-shadow: 0 6px 6px -4px #EBEAED, 0 -4px 4px -4px #EBEAED; // Apply shadow effects for top and bottom
+
+    .dropdown {
+        .btn:focus {
+            box-shadow: none; // Remove the focus box-shadow from buttons
+        }
+
+        .dropdown-toggle[aria-expanded="true"]::after {
+            border-top: 0; // Remove the default downward arrow
+            border-right: 0.3em solid transparent;
+            border-bottom: 0.3em solid #000; // Custom arrow with new color
+            border-left: 0.3em solid transparent;
+        }
+
+        .rounded-circle {
+            margin-inline-end: 6px; // Space to the right of rounded-circle elements
+        }
+
+        .dropdown-menu {
+            width: 100%; // Full width for dropdown menu
+            border: none; // Remove border
+            box-shadow: 0 6px 6px -4px #EBEAED, 0 -4px 4px -4px #EBEAED; // Custom shadow
+            border-radius: 6px; // Rounded corners
+
+            hr {
+                width: 85%; // Width of the horizontal rule
+                margin-inline: 5px; // Inline margin for spacing
+            }
+
+            li {
+                margin: 0.5rem 0px; // Vertical margin for list items
+                @include flex-container(center, center); // Center items horizontally and vertically
+
+                a {
+                    font-size: 12px; // Set font size for links
+                    padding: 0.3rem; // Padding for links
+                    margin-inline-start: 0.3rem; // Start margin for spacing
+                }
+
+                .dropdown-item {
+                    width: 80%; // Set width for dropdown items
+                    text-align: start; // Align text to the start
+
+                    &.green {
+                        color: $dark-green; // Apply dark green color to green class items
+                    }
+
+                    &:focus {
+                        color: $dark-green; // Change color on focus
+                        background-color: transparent; // Keep background transparent
+                    }
+                }
+
+                &.power {
+                    a {
+                        font-weight: 700; // Bold text for power class items
+                    }
+                }
+
+                &.group {
+                    a {
+                        font-weight: 400; // Normal weight for group class items
+                    }
+                }
+
+                img {
+                    $var: 17.65px;
+                    width: $var; // Set image width using variable
+                    height: $var; // Set image height using variable
+                }
+            }
+        }
+    }
+}
+
+.parent {
+    @include flex-container(space-between, flex-start);
+
+    .sidebar {
+        width: 30%; // Set initial sidebar width
+        transition: width 0.3s; // Smooth width transition
+        position: relative;
+        padding-left: 0px;
+        box-shadow: -6px 0 6px -4px #EBEAED; // Shadow on the left side
+        height: 908px; // Fixed height
+        display: flex;
+        flex-direction: column; // Vertical layout
+        justify-content: space-between; // Space out items
+        align-items: center; // Center align items horizontally
+
+        .sidebar-ul {
+            padding-inline-start: 8px; // Padding at the start of the list
+            width: 100%; // Width of sidebar list
+            padding: 19px 0px; // Vertical padding for the list
+
+            li {
+                width: 95%;
+
+                .links {
+                    margin-block: 4px; // Vertical margin for links
+                    padding: 10px 16px;
+
+                    &:hover {
+                        background-color: $dark-green; // Change background on hover
+                        color: white !important; // Change text color to white
+                        border-radius: 8px; // Rounded corners
+                        padding: 10px, 16px, 10px, 16px; // Padding around the link
+
+                        .icon-sidebar {
+                            color: white !important; // Change icon color on hover
+                        }
+
+                        .nav-link {
+                            color: white; // Change link color on hover              
+                        }
+
+                    }
+                }
+
+            }
+        }
+
+        .nav-link,
+        .close {
+            position: relative;
+            color: #6E7887; // Default color for nav-link and close
+            font-size: 16px; // Font size for nav-link and close
+            font-weight: 700; // Font weight for nav-link and close
+            cursor: pointer; // Pointer cursor on hover
+            text-decoration: none; // Remove text decoration
+            padding: 2px 0px;
+        }
+
+        .close:hover {
+            color: #6E7887; // Hover color for close button
+        }
+
+        .close {
+            margin-inline-start: 13px; // Space to the left of the close button
+        }
+
+        .right-menue {
+
+            .dropdown-item {
+                &:active {
+                    color: $dark-green; // Change color when active
+                    background-color: transparent; // Transparent background when active
+                }
+            }
+        }
+
+        .nav-item {
+            .icon-sidebar {
+                padding: 10px; // Padding for sidebar icons
+                color: $dark-green; // Set default icon color
+            }
+
+            .drop-img {
+                @include flex-container(space-between, center); // Space between items and center vertically
+                width: 90%; // Set width for drop-img
+
+                &:active {
+                    background-color: #DFFFE6; // Change background color when active
+                    color: $dark-green !important; // Change text color when active
+                }
+            }
+
+            .collapse {
+                .card {
+                    border: none;
+                    text-align: start;
+
+                    .dropdown-item {
+                        color: $light-gray;
+                        font-size: .9375rem;
+
+                        &:hover {
+                            color: $dark-green ;
+                            background-color: transparent
+                        }
+
+                        &:active {
+                            background-color: transparent;
+                            color: $dark-green ;
+                        }
+
+                        &:focus {
+                            background-color: transparent;
+                            color: $dark-green ;
+                        }
+                    }
+                }
+            }
+        }
+
+        .custom-button {
+            background-color: #E69D16; // Set button background color
+            color: white; // Set button text color
+            border: none; // Remove border
+            border-radius: 12px; // Rounded corners for the button
+            padding: 12px 26px; // Button padding
+            font-size: 14px; // Font size for button text
+            font-weight: 400; // Font weight for button text
+            cursor: pointer; // Pointer cursor on hover
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold; // Bold text for the button
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Add box shadow
+            margin-bottom: 20px; // Bottom margin for spacing
+            cursor: pointer; // Pointer cursor
+            width: 90%;
+        }
+
+        .custom-button .icon {
+            margin-left: 10px; // Space to the left of the icon in the button
+            font-size: 20px; // Font size for the icon
+        }
+
+        .custom-button:hover {
+            background-color: #d88e13; // Change background color on hover
+        }
+
+        &.collapsed {
+            width: 90px !important; // Set width when sidebar is collapsed
+
+            .links {
+                padding: 0px;
+                .icon-sidebar {
+                    color: $light-gray; // Change icon color in collapsed state
+
+                    &:hover {
+                        color: white; // Change icon color on hover in collapsed state
+                    }
+                }
+            }
+
+            .right-menue {
+                right: 100%;
+                top: 0;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                position: absolute;
+            }
+            .sidebar-ul {
+                    .nav-item {
+                        width: 76%;
+                        .collapse , .card {
+                            display: none !important;
+                        }
+                    }
+                
+            }
+        }
+    }
+
+    .links.active {
+        background-color: #DFFFE6; // Active state background color
+        color: $dark-green !important; // Active state text color
+        border-radius: 6px; // Rounded corners for active state
+        padding: 5px 8px;
+        overflow: hidden;
+        ;
+
+        .icon-sidebar {
+            color: $dark-green !important; // Active state icon color
+        }
+    }
+
+    .content {
+        background-color: $background-content;
+    }
+}
+
+@media (max-width:1200px) {
+    .parent {
+        .sidebar {
+            width: 40%;
+
+            .nav-link {
+                font-size: 14px;
+            }
+
+            .custom-button {
+                padding: 11px 17px;
+
+            }
+        }
+    }
+}
+
+@media (max-width:1200px) {
+    .parent {
+        flex-direction: column;
+
+        .sidebar {
+            height: 280px !important;
+            width: 100% !important;
+            align-items: flex-start;
+
+            .sidebar-ul {
+                li {
+                    width: 98%;
+                    height: 47px;
+                }
+
+                .nav-item {
+                    .nav-link {
+                        padding: 0px;
+                    }
+                }
+            }
+
+            &.collapsed {
+                width: 100% !important; // Set width when sidebar is collapsed
+               height: 219px !important;
+
+                .sidebar-ul {
+                    flex-direction: row !important;
+
+                    li {
+                        width: 10%;
+                    }
+                }
+
+                .right-menue {
+                    right: -114%;
+                    top: 44px;
+
+                }
+
+            }
+
+            .custom-button {
+                margin-inline-start: 20px;
+            }
+
+            .links {
+                margin-block: 0px;
+            }
+
+            .nav-item {
+                .close-img {
+                    transform: rotate(-91deg);
+                }
+
+            }
+
+            .right-menue {
+                width: 48%;
+                right: 52%;
+            }
+
+        }
+
+    }
+}
