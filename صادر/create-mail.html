@@ -1,0 +1,217 @@
+<section class="create-mail">
+    <div class="create-mail-container">
+        <!-- Navigation Breadcrumb -->
+        <ul class="create-mail">
+            <li class="create-mail-item"><a href="#"><i class="fa fa-home"></i></a></li>
+            <li class="create-mail-item"><span>/</span></li>
+            <li class="create-mail-item"><a href="#" class="mail">البريد</a></li>
+            <li class="create-mail-item"><span>/</span></li>
+            <li class="create-mail-item active"><a href="#">انشاء البــــريد الداخلي</a></li>
+        </ul>
+    </div>
+
+    <div class="create-mail-mainpart">
+        <div class="form-container">
+            <!-- Form Header -->
+            <div class="form-header">
+                <h2>تفاصيل المعاملة</h2>
+                <div class="mail-item">
+                    <span class="date">
+                        <img src="../assets/images/Icon14.png" class="mail-calender" />
+                        <span class="mail-date">7 ابريل 2024</span>
+                    </span>
+                    <img src="../assets/images/Group ss.png" class="img-date" />
+                </div>
+            </div>
+            <hr />
+
+            <!-- Form -->
+            <form>
+                <!-- Topic Field -->
+                <div class="form-group">
+                    <label for="topic">الموضوع
+                        <span class="mail-star">*</span>
+                    </label>
+                    <input type="text" id="topic" placeholder="الإجازات" required class="mail-input">
+                </div>
+
+                <!-- Explanation Field -->
+                <div class="form-group">
+                    <div class="mail-explaine">
+                        <label for="explanation">الشرح
+                            <span class="mail-star">*</span>
+                        </label>
+                        <div class="toggle-container">
+                            <label for="secret-toggle">شرح سري</label>
+                            <input type="checkbox" id="secret-toggle">
+                        </div>
+                    </div>
+                    <textarea id="explanation" placeholder="اكتب هنا..." required class="mail-input"></textarea>
+                </div>
+
+                <!-- Document Type and Classification -->
+                <div class="form-group">
+                    <div class="document-header">
+                        <label for="document-type">نوع المستند
+                            <span class="mail-star">*</span>
+                        </label>
+                        <label for="document-type">
+                            <img src="../assets/images/info-circle.png"> تصنيف المعاملة
+                            <span class="mail-star">*</span>
+                        </label>
+                    </div>
+                    <div class="input-group mail-content">
+                        <div>
+                            <span class="mail-num">987</span>
+                            <img src="../assets/images/Frame dd.png" />
+                            <input type="text" placeholder="تعميد" required class="text">
+                        </div>
+                        <div>
+                            <span class="mail-num">987</span>
+                            <img src="../assets/images/Frame dd.png" />
+                            <input type="text" id="classification" placeholder="إجازة موظف" required class="text">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Status Mail -->
+                <div class="statues-mail">
+                    <div class="form-group toggle-button statues-mail-item">
+                        <label for="account">إنشاء معاملة حسابي</label>
+                        <input type="checkbox" id="account">
+                    </div>
+                    <div class="form-group statues-mail-item">
+                        <label for="notes">الإحالة
+                            <span class="mail-star">*</span>
+                        </label>
+                        <input type="text" id="classification" required class="text">
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- Attachments Container -->
+        <div class="attachments-container">
+            <div class="attachments-header">
+                <h2>المرفقات</h2>
+                <div class="attachment-icons">
+                    <!-- Trigger Modal -->
+                    <img src="../assets/images/Group plus.png" class="attachment-plus" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal" alt="Trigger Modal">
+
+                    <!-- Modal Structure -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">إضافة مرفقات</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <!-- Attachment Type -->
+                                        <div class="form-group">
+                                            <label for="attachment-type">نوع المرفق</label>
+                                            <select id="attachment-type" class="form-control">
+                                                <option value="other">أخرى</option>
+                                            </select>
+                                        </div>
+
+                                        <!-- Attachment Title -->
+                                        <div class="form-group">
+                                            <label for="attachment-title" class="attachment-title">عنوان المرفق
+                                                <span class="red-star">*</span>
+                                            </label>
+                                            <input type="text" id="attachment-title" class="form-control"
+                                                placeholder="عنوان المرفق">
+                                        </div>
+
+                                        <!-- File Upload -->
+                                        <div class="form-group upload-section">
+                                            <input type="file" id="fileInput" accept=".pdf" style="display: none;">
+                                            <div class="upload-box" id="uploadBox">
+                                                <img src="../assets/images/modal12.png" alt="Upload Icon">
+                                                <label class="upload-modal">ارفع المرفقات هنا</label>
+                                                <p>يمكنك سحب ملفاتك من جهازك إلى هنا</p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Save Button -->
+                                        <div class="save-modal">
+                                            <button type="submit" class="btn save-btn">حفظ</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Another Icon -->
+                    <img src="../assets/images/Group ss.png" />
+                </div>
+            </div>
+
+            <!-- Attachments List -->
+            <div class="attachments-list">
+                <div class="attachment-card">
+                    <div class="attachment-details">
+                        <div class="attachment-details-icon">
+                            <img src="../assets/images/Group 1803.png" />
+                            <p class="attachment-date">05/02/2023</p>
+                        </div>
+                        <div class="attachment-text">
+                            <p class="attachment-type">مستندات</p>
+                            <p class="attachment-user">محمد عادل عبدالعزيز محمد</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="attachment-card">
+                    <div class="attachment-details">
+                        <div class="attachment-details-icon">
+                            <img src="../assets/images/Group 1803.png" />
+                            <p class="attachment-date">05/02/2023</p>
+                        </div>
+                        <div class="attachment-text">
+                            <p class="attachment-type">مستندات</p>
+                            <p class="attachment-user">محمد عادل عبدالعزيز محمد</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="attachment-card">
+                    <div class="attachment-details">
+                        <div class="attachment-details-icon">
+                            <img src="../assets/images/Group 1803.png" />
+                            <p class="attachment-date">05/02/2023</p>
+                        </div>
+                        <div class="attachment-text">
+                            <p class="attachment-type">مستندات</p>
+                            <p class="attachment-user">محمد عادل عبدالعزيز محمد</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="attachment-card">
+                    <div class="attachment-details">
+                        <div class="attachment-details-icon">
+                            <img src="../assets/images/Group 1803.png" />
+                            <p class="attachment-date">05/02/2023</p>
+                        </div>
+                        <div class="attachment-text">
+                            <p class="attachment-type">مستندات</p>
+                            <p class="attachment-user">محمد عادل عبدالعزيز محمد</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="main-btn">
+        <button type="submit" class="mail-submit">إرسال</button>
+    </div>
+</section>
+
+

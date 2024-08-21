@@ -151,7 +151,8 @@ body {
 }
 .parent .sidebar .nav-item .collapse .card .dropdown-item {
   color: #B1B1B1;
-  font-size: 0.9375rem;
+  font-size: 15px;
+  padding: 10px 40px 10px 42px;
 }
 .parent .sidebar .nav-item .collapse .card .dropdown-item:hover {
   color: #41843A;
@@ -160,10 +161,12 @@ body {
 .parent .sidebar .nav-item .collapse .card .dropdown-item:active {
   background-color: transparent;
   color: #41843A;
+  font-weight: 700;
 }
 .parent .sidebar .nav-item .collapse .card .dropdown-item:focus {
   background-color: transparent;
   color: #41843A;
+  font-weight: 700;
 }
 .parent .sidebar .nav-item .hover-content {
   display: none;
@@ -195,8 +198,8 @@ body {
   border: none;
   border-radius: 12px;
   padding: 12px 26px;
-  font-size: 14px;
-  font-weight: 400;
+  font-size: 16px;
+  font-weight: 400 !important;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -262,7 +265,7 @@ body {
     flex-direction: column;
   }
   .parent .sidebar {
-    height: 220px !important;
+    height: 324px !important;
     width: 100% !important;
     align-items: flex-start;
   }
@@ -283,7 +286,7 @@ body {
     align-items: center;
   }
   .parent .sidebar.collapsed .sidebar-ul .nav-item .card-hover {
-    right: 0%;
+    right: 10%;
     top: 50px;
     z-index: 1;
   }
@@ -306,13 +309,17 @@ body {
 }
 @media (max-width: 650px) {
   .parent .sidebar {
-    height: 300px !important;
+    height: 514px !important;
   }
   .parent .sidebar .sidebar-ul {
     flex-direction: column !important;
   }
   .parent .sidebar .sidebar-ul .nav-item {
     width: 100%;
+  }
+  .parent .sidebar.collapsed .sidebar-ul .nav-item .card-hover {
+    right: -15%;
+    width: 150px;
   }
 }
 .page-content {
@@ -923,4 +930,695 @@ body {
   .page-content .filter-search-section .filters .filter-buttons .custoum-butn .filter-btn {
     width: 95%;
   }
+}
+.create-mail .create-mail-container {
+  padding: 10px 20px;
+}
+.create-mail .create-mail {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.create-mail .create-mail .create-mail-item {
+  display: flex;
+  align-items: center;
+}
+.create-mail .create-mail .create-mail-item:not(:last-child) {
+  margin-right: 5px;
+}
+.create-mail .create-mail .create-mail-item a {
+  color: #757575;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 16px;
+  cursor: pointer;
+}
+.create-mail .create-mail .create-mail-item a:hover {
+  text-decoration: underline;
+}
+.create-mail .create-mail .create-mail-item span {
+  color: #b1b1b1;
+  margin: 0 5px;
+  font-size: 14px;
+}
+.create-mail .create-mail .create-mail-item.active a {
+  color: black;
+}
+.create-mail .create-mail .create-mail-item .fa-home {
+  font-size: 16px;
+}
+.create-mail .create-mail .create-mail-item .fa-home:hover {
+  color: #41843A;
+}
+.create-mail .create-mail-mainpart {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+.create-mail .create-mail-mainpart .form-container {
+  width: 65%;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.create-mail .create-mail-mainpart .form-container .form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.create-mail .create-mail-mainpart .form-container .form-header .mail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.create-mail .create-mail-mainpart .form-container .form-header .mail-item .date {
+  color: #8CC285;
+  font-size: 14px;
+  font-weight: 400;
+  background-color: #F6FBF6;
+  border: 1ps solid #D2E3D0;
+  padding: 10px;
+  border-radius: 4px;
+}
+.create-mail .create-mail-mainpart .form-container .form-header .mail-item .date .mail-calender {
+  margin-inline-end: 3px;
+}
+.create-mail .create-mail-mainpart .form-container .form-header .mail-item .img-date {
+  margin-inline-start: 10px;
+}
+.create-mail .create-mail-mainpart .form-container .form-header h2 {
+  font-size: 18px;
+  color: black;
+  font-weight: 700;
+  margin: 0;
+}
+.create-mail .create-mail-mainpart .form-container form {
+  display: flex;
+  flex-direction: column;
+}
+.create-mail .create-mail-mainpart .form-container form .form-group {
+  margin-bottom: 15px;
+}
+.create-mail .create-mail-mainpart .form-container form .form-group label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  color: black;
+}
+.create-mail .create-mail-mainpart .form-container form .form-group label .mail-star {
+  color: #F04438;
+  font-size: 14px;
+  font-family: 400;
+}
+.create-mail .create-mail-mainpart .form-container form .form-group input[type=text],
+.create-mail .create-mail-mainpart .form-container form .form-group input[type=number],
+.create-mail .create-mail-mainpart .form-container form .form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #B1B1B1;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #3B4754;
+  resize: none;
+}
+.create-mail .create-mail-mainpart .form-container form .form-group textarea {
+  height: 80px;
+}
+.create-mail .create-mail-mainpart .form-container form .form-group .mail-explaine {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.create-mail .create-mail-mainpart .form-container form .form-group .mail-explaine .toggle-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.create-mail .create-mail-mainpart .form-container form .form-group .mail-explaine .toggle-container label {
+  margin-left: 10px;
+  font-size: 14px;
+  color: #707070;
+}
+.create-mail .create-mail-mainpart .form-container form .form-group .mail-explaine .toggle-container input[type=checkbox] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 40px;
+  height: 20px;
+  background-color: #B1B1B1;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.create-mail .create-mail-mainpart .form-container form .form-group .mail-explaine .toggle-container input[type=checkbox]:checked {
+  background-color: #41843A;
+}
+.create-mail .create-mail-mainpart .form-container form .form-group .mail-explaine .toggle-container input[type=checkbox]:checked::before {
+  transform: translateX(20px);
+}
+.create-mail .create-mail-mainpart .form-container form .form-group .mail-explaine .toggle-container input[type=checkbox]::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  transition: transform 0.3s ease;
+}
+.create-mail .create-mail-mainpart .form-container form .form-group .input-group {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.create-mail .create-mail-mainpart .form-container form .form-group .input-group .text {
+  width: 40%;
+  padding: 10px;
+  border: 1px solid #B1B1B1;
+  border-radius: 5px;
+  font-size: 14px;
+  resize: none;
+}
+.create-mail .create-mail-mainpart .form-container form .form-group .input-group .text::-moz-placeholder {
+  color: black;
+  font-size: 14px;
+  font-weight: 400;
+}
+.create-mail .create-mail-mainpart .form-container form .form-group .input-group .text::placeholder {
+  color: black;
+  font-size: 14px;
+  font-weight: 400;
+}
+.create-mail .create-mail-mainpart .form-container form .form-group .input-group .mail-num {
+  border-radius: 6px;
+  padding: 10px 10px 10px 44px;
+  border: 1px solid #D1D5DB;
+}
+.create-mail .create-mail-mainpart .form-container form .form-group .input-group div {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.create-mail .create-mail-mainpart .form-container form .form-group .document-header {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+.create-mail .create-mail-mainpart .form-container form .statues-mail {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.create-mail .create-mail-mainpart .form-container form .statues-mail .toggle-button {
+  display: flex;
+  align-items: center;
+}
+.create-mail .create-mail-mainpart .form-container form .statues-mail .toggle-button label {
+  margin-left: 10px;
+}
+.create-mail .create-mail-mainpart .form-container form .statues-mail .toggle-button input[type=checkbox] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 40px;
+  height: 20px;
+  background-color: #B1B1B1;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.create-mail .create-mail-mainpart .form-container form .statues-mail .toggle-button input[type=checkbox]:checked {
+  background-color: #8CC285;
+}
+.create-mail .create-mail-mainpart .form-container form .statues-mail .toggle-button input[type=checkbox]:checked::before {
+  transform: translateX(20px);
+}
+.create-mail .create-mail-mainpart .form-container form .statues-mail .toggle-button input[type=checkbox]::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  transition: transform 0.3s ease;
+}
+.create-mail .create-mail-mainpart .form-container form .statues-mail .statues-mail-item {
+  width: 45%;
+}
+.create-mail .create-mail-mainpart .attachments-container {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  width: 32%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.create-mail .create-mail-mainpart .attachments-container .attachments-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.create-mail .create-mail-mainpart .attachments-container .attachments-header h2 {
+  font-size: 1.2em;
+  margin: 0;
+  font-weight: 700;
+}
+.create-mail .create-mail-mainpart .attachments-container .attachments-header .attachment-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.create-mail .create-mail-mainpart .attachments-container .attachments-header .attachment-icons img {
+  margin-inline: 3px;
+}
+.create-mail .create-mail-mainpart .attachments-container .attachments-header .attachment-icons .attachment-plus {
+  cursor: pointer;
+}
+.create-mail .create-mail-mainpart .attachments-container .attachments-header .modal .modal-dialog .modal-content .modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.create-mail .create-mail-mainpart .attachments-container .attachments-header .modal .modal-dialog .modal-content .modal-header .btn-close {
+  margin: 0px;
+  background-color: #F5F6F7;
+}
+.create-mail .create-mail-mainpart .attachments-container .attachments-header .modal .modal-dialog .modal-content .modal-header h5 {
+  font-weight: 700;
+  font-size: 16px;
+}
+.create-mail .create-mail-mainpart .attachments-container .attachments-header .modal .modal-dialog .modal-content .modal-body form .form-group {
+  margin-bottom: 15px;
+}
+.create-mail .create-mail-mainpart .attachments-container .attachments-header .modal .modal-dialog .modal-content .modal-body form .form-group label {
+  display: block;
+  font-size: 0.9em;
+  margin-bottom: 5px;
+}
+.create-mail .create-mail-mainpart .attachments-container .attachments-header .modal .modal-dialog .modal-content .modal-body form .form-group input.form-control,
+.create-mail .create-mail-mainpart .attachments-container .attachments-header .modal .modal-dialog .modal-content .modal-body form .form-group select.form-control {
+  width: 100%;
+  padding: 8px;
+  font-size: 0.9em;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  outline: none;
+}
+.create-mail .create-mail-mainpart .attachments-container .attachments-header .modal .modal-dialog .modal-content .modal-body form .form-group input.form-control:focus,
+.create-mail .create-mail-mainpart .attachments-container .attachments-header .modal .modal-dialog .modal-content .modal-body form .form-group select.form-control:focus {
+  border-color: black;
+  box-shadow: none;
+}
+.create-mail .create-mail-mainpart .attachments-container .attachments-header .modal .modal-dialog .modal-content .modal-body form .form-group .attachment-title .red-star {
+  color: red;
+  font-size: 14px;
+}
+.create-mail .create-mail-mainpart .attachments-container .attachments-header .modal .modal-dialog .modal-content .modal-body form .form-group #fileInput {
+  display: none;
+}
+.create-mail .create-mail-mainpart .attachments-container .attachments-header .modal .modal-dialog .modal-content .modal-body form .upload-section {
+  text-align: center;
+  background-color: #F7FAF7;
+}
+.create-mail .create-mail-mainpart .attachments-container .attachments-header .modal .modal-dialog .modal-content .modal-body form .upload-section .upload-box {
+  border: 0.5px dashed #8CC285;
+  border-radius: 4px;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+.create-mail .create-mail-mainpart .attachments-container .attachments-header .modal .modal-dialog .modal-content .modal-body form .upload-section .upload-box img {
+  display: block;
+  margin: 0 auto 10px;
+}
+.create-mail .create-mail-mainpart .attachments-container .attachments-header .modal .modal-dialog .modal-content .modal-body form .upload-section .upload-box p {
+  font-size: 0.9em;
+  color: #555;
+  margin: 0;
+}
+.create-mail .create-mail-mainpart .attachments-container .attachments-header .modal .modal-dialog .modal-content .modal-body form .upload-section .upload-box .upload-modal {
+  color: #41843A;
+}
+.create-mail .create-mail-mainpart .attachments-container .attachments-header .modal .modal-dialog .modal-content .modal-body form .save-modal {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.create-mail .create-mail-mainpart .attachments-container .attachments-header .modal .modal-dialog .modal-content .modal-body form .save-modal .save-btn {
+  width: 30%;
+  padding: 10px;
+  background: linear-gradient(225.57deg, #8CC285 0%, #466143 164.87%);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.create-mail .create-mail-mainpart .attachments-container .attachments-header .modal .modal-dialog .modal-content .modal-body form .save-modal .save-btn:hover {
+  background-color: #7bb64a;
+}
+.create-mail .create-mail-mainpart .attachments-container .attachments-list {
+  max-height: 450px;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+.create-mail .create-mail-mainpart .attachments-container .attachments-list::-webkit-scrollbar {
+  width: 6px;
+  background-color: #f5f5f5;
+}
+.create-mail .create-mail-mainpart .attachments-container .attachments-list::-webkit-scrollbar-thumb {
+  background-color: #B1B1B1;
+  border-radius: 10px;
+}
+.create-mail .create-mail-mainpart .attachments-container .attachments-list .attachment-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.create-mail .create-mail-mainpart .attachments-container .attachments-list .attachment-card .attachment-details p {
+  margin: 0;
+  font-size: 14px;
+  color: black;
+  margin-block-end: 5px;
+}
+.create-mail .create-mail-mainpart .attachments-container .attachments-list .attachment-card .attachment-details .attachment-date {
+  font-size: 13px;
+}
+.create-mail .create-mail-mainpart .attachments-container .attachments-list .attachment-card .attachment-details .attachment-type {
+  color: #aaa;
+}
+.create-mail .create-mail-mainpart .attachments-container .attachments-list .attachment-card .attachment-details-icon {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.create-mail .create-mail-mainpart .attachments-container .attachments-list .attachment-card .attachment-details-icon img {
+  margin-inline-end: 7px;
+}
+.create-mail .create-mail-mainpart .attachments-container .attachments-list .attachment-card .attachment-text {
+  margin-inline-start: 25px;
+}
+.create-mail .main-btn {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-block: 1.5rem;
+}
+.create-mail .main-btn .mail-submit {
+  width: 9.375rem;
+  height: 2.75rem;
+  background: linear-gradient(225.57deg, #8CC285 0%, #466143 164.87%);
+  padding: var(--4, 1rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.create-mail .main-btn .mail-submit:hover {
+  background-color: #466143;
+}
+
+@media (max-width: 1400px) {
+  .create-mail .create-mail-mainpart .form-container .input-group {
+    flex-direction: column;
+  }
+  .create-mail .create-mail-mainpart .form-container .input-group div {
+    margin-block: 5px;
+    width: 100% !important;
+  }
+}
+@media (max-width: 1200px) {
+  .create-mail .create-mail-mainpart {
+    flex-direction: column;
+    align-items: center;
+  }
+  .create-mail .create-mail-mainpart .form-container,
+  .create-mail .create-mail-mainpart .attachments-container {
+    width: 95%;
+  }
+  .create-mail .create-mail-mainpart .attachments-container {
+    margin-block: 10px;
+  }
+  .create-mail .main-btn .mail-submit {
+    margin-inline-end: 24px;
+  }
+}
+@media (max-width: 600px) {
+  .create-mail .create-mail-mainpart .form-container {
+    padding: 15px;
+  }
+  .create-mail .create-mail-mainpart .form-container .form-header {
+    flex-direction: column;
+  }
+  .create-mail .create-mail-mainpart .form-container .form-header h2 {
+    margin-block-end: 10px;
+  }
+  .create-mail .create-mail-mainpart .form-container form .form-group label {
+    font-size: 12px;
+  }
+  .create-mail .create-mail-mainpart .form-container form .form-group input[type=text],
+  .create-mail .create-mail-mainpart .form-container form .form-group input[type=number],
+  .create-mail .create-mail-mainpart .form-container form .form-group textarea {
+    font-size: 12px;
+  }
+  .create-mail .create-mail-mainpart .form-container form button {
+    font-size: 14px;
+  }
+  .create-mail .create-mail-mainpart .form-container .statues-mail {
+    flex-direction: column;
+  }
+  .create-mail .create-mail-mainpart .form-container .statues-mail .statues-mail-item {
+    width: 100% !important;
+  }
+}
+.archieve .archieve-container {
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.archieve .archieve-container .archieve {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.archieve .archieve-container .archieve .archieve-item {
+  display: flex;
+  align-items: center;
+}
+.archieve .archieve-container .archieve .archieve-item:not(:last-child) {
+  margin-right: 5px;
+}
+.archieve .archieve-container .archieve .archieve-item a {
+  color: #757575;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 16px;
+  cursor: pointer;
+}
+.archieve .archieve-container .archieve .archieve-item a:hover {
+  text-decoration: underline;
+}
+.archieve .archieve-container .archieve .archieve-item span {
+  color: #b1b1b1;
+  margin: 0 5px;
+  font-size: 14px;
+}
+.archieve .archieve-container .archieve .archieve-item.active a {
+  color: black;
+}
+.archieve .archieve-container .archieve .archieve-item .fa-home {
+  font-size: 16px;
+}
+.archieve .archieve-container .archieve .archieve-item .fa-home:hover {
+  color: #41843A;
+}
+.archieve .archieve-container .toggle-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.archieve .archieve-container .toggle-container label {
+  margin-left: 10px;
+  font-size: 12px;
+  color: black;
+  font-weight: 700;
+  margin-inline-start: 20px;
+}
+.archieve .archieve-container .toggle-container input[type=checkbox] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 40px;
+  height: 20px;
+  background-color: #B1B1B1;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.archieve .archieve-container .toggle-container input[type=checkbox]:checked {
+  background-color: #41843A;
+}
+.archieve .archieve-container .toggle-container input[type=checkbox]:checked::before {
+  transform: translateX(20px);
+}
+.archieve .archieve-container .toggle-container input[type=checkbox]::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  transition: transform 0.3s ease;
+}
+.archieve .archieve-main {
+  background-color: white;
+}
+.archieve .archieve-main .archieve-search-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0px;
+  border-radius: 10px;
+}
+.archieve .archieve-main .archieve-search-section .archieves {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  justify-content: inherit;
+}
+.archieve .archieve-main .archieve-search-section .archieves .search-bar {
+  display: flex;
+  align-items: center;
+  border: 1px solid #CCC;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 45%;
+  margin-inline-end: 5px;
+}
+.archieve .archieve-main .archieve-search-section .archieves .search-bar input[type=text] {
+  border: none;
+  padding: 10px 15px;
+  font-size: 14px;
+  outline: none;
+  width: 100%;
+  height: 51px;
+  color: #6c757d;
+}
+.archieve .archieve-main .archieve-search-section .archieves .search-bar .search-btn {
+  background: linear-gradient(225.57deg, #8CC285 0%, #466143 164.87%);
+  color: white;
+  border: none;
+  padding: 8px 25px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 8px;
+  margin-inline-end: 5px;
+}
+.archieve .archieve-main .archieve-search-section .archieves .search-bar .search-btn:hover {
+  background-color: #30612a;
+}
+.archieve .archieve-main .archieve-search-section .archieves .search-bar .search {
+  margin-inline-start: 10px;
+}
+.archieve .archieve-main .archieve-search-section .archieves .archieve-buttons {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 400;
+}
+.archieve .archieve-main .archieve-search-section .archieves .archieve-buttons .custoum-butn {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  background-color: transparent;
+  border: 0px;
+}
+.archieve .archieve-main .archieve-search-section .archieves .archieve-buttons .custoum-butn .archieve-btn {
+  background-color: white;
+  margin-inline: 5px;
+  border-radius: 3px;
+  padding: 6px 0px;
+  width: 15%;
+  border: 1px solid #E6E6E6;
+}
+.archieve .archieve-main .archieve-search-section .archieves .archieve-buttons .custoum-butn .archieve-btn .dropdown-toggle:focus {
+  box-shadow: none;
+}
+.archieve .archieve-main .archieve-search-section .archieves .archieve-buttons .custoum-butn .archieve-btn .dropdown-toggle::after {
+  display: none;
+}
+.archieve .archieve-main .archieve-search-section .archieves .archieve-buttons .custoum-butn .archieve-btn .dropdown-toggle .icon-drop {
+  margin-inline-start: 20px;
+}
+.archieve .archieve-main .sec-container .table {
+  table-layout: fixed;
+}
+.archieve .archieve-main .sec-container .table .table-archive {
+  background-color: #F2F4F5;
+}
+.archieve .archieve-main .sec-container .table .table-archive .one {
+  width: 200px;
+}
+.archieve .archieve-main .sec-container .table .table-archive .two, .archieve .archieve-main .sec-container .table .table-archive .three {
+  width: 60px;
+  text-align: center;
+}
+.archieve .archieve-main .sec-container .table .table-archive .hidden {
+  width: 20px;
+}
+.archieve .archieve-main .sec-container .table .table-archive .th-arch {
+  width: 20px;
+}
+.archieve .archieve-main .sec-container .table tbody {
+  background-color: white;
+}
+.archieve .archieve-main .sec-container .table tbody .tr-archieve .td-archieve {
+  text-align: center;
+}
+.archieve .archieve-main .sec-container .table tbody .tr-archieve .zero-arch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.archieve .archieve-main .sec-container .pagination .page-link {
+  color: #6c757d;
+}
+.archieve .archieve-main .sec-container .pagination .page-link:hover {
+  color: #343a40;
 }/*# sourceMappingURL=main.css.map */

@@ -178,8 +178,8 @@ body {
 
                     .dropdown-item {
                         color: $light-gray;
-                        font-size: .9375rem;
-
+                        font-size: 15px;
+                        padding:    10px 40px 10px 42px;
                         &:hover {
                             color: $dark-green ;
                             background-color: transparent
@@ -188,11 +188,13 @@ body {
                         &:active {
                             background-color: transparent;
                             color: $dark-green ;
+                            font-weight: 700;
                         }
 
                         &:focus {
                             background-color: transparent;
                             color: $dark-green ;
+                            font-weight: 700;
                         }
                     }
                 }
@@ -235,8 +237,8 @@ body {
             border: none; // Remove border
             border-radius: 12px; // Rounded corners for the button
             padding: 12px 26px; // Button padding
-            font-size: 14px; // Font size for button text
-            font-weight: 400; // Font weight for button text
+            font-size: 16px; // Font size for button text
+            font-weight: 400 !important;
             cursor: pointer; // Pointer cursor on hover
             display: flex;
             align-items: center;
@@ -322,7 +324,7 @@ body {
         flex-direction: column;
 
         .sidebar {
-            height: 220px !important;
+            height: 324px !important;
             width: 100% !important;
             align-items: flex-start;
             .close-img{
@@ -339,7 +341,7 @@ body {
                         width: 33%;
                         @include flex-container(center,center);
                         .card-hover{
-                            right: 0%;
+                            right: 10%;
                             top: 50px;
                             z-index: 1;
                         }
@@ -373,11 +375,23 @@ body {
 @media (max-width:650px) {
     .parent{
         .sidebar{
-            height: 300px !important;
+            height: 514px !important;
             .sidebar-ul{
                 flex-direction: column !important;
                 .nav-item{
                     width: 100%;
+                }
+            }
+            &.collapsed {
+                .sidebar-ul{
+                   
+                    .nav-item{
+                        .card-hover{
+                            right: -15%;
+                            width: 150px;
+                 
+                        }
+                    }
                 }
             }
         }

@@ -1,0 +1,579 @@
+.create-mail {
+    .create-mail-container {
+        padding: 10px 20px; // Adjust padding for spacing
+    }
+
+    .create-mail {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        .create-mail-item {
+            display: flex;
+            align-items: center;
+
+            &:not(:last-child) {
+                margin-right: 5px; // Spacing between create-mail items
+            }
+
+            a {
+                color: $icon-color;
+                text-decoration: none;
+                font-weight: 400; // Bold text for links
+                font-size: 16px;
+                cursor: pointer;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            span {
+                color: #b1b1b1; // Color for separator and inactive items
+                margin: 0 5px;
+                font-size: 14px;
+            }
+
+            &.active a {
+                color: black;
+            }
+
+            .fa-home {
+                font-size: 16px; // Icon size
+
+                &:hover {
+                    color: $dark-green;
+                }
+            }
+        }
+    }
+
+    .create-mail-mainpart {
+        @include flex-container(space-between, flex-start);
+        margin-top: 20px;
+
+        .form-container {
+            width: 65%;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+            .form-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 20px;
+
+                .mail-item {
+                    @include flex-container(space-between, flex-start);
+
+                    .date {
+                        color: #8CC285;
+                        font-size: 14px;
+                        font-weight: 400;
+                        background-color: #F6FBF6;
+                        border: 1ps solid #D2E3D0;
+                        padding: 10px;
+                        border-radius: 4px;
+
+                        .mail-calender {
+                            margin-inline-end: 3px;
+                        }
+                    }
+
+                    .img-date {
+                        margin-inline-start: 10px;
+                    }
+                }
+
+                h2 {
+                    font-size: 18px;
+                    color: black;
+                    font-weight: 700;
+                    margin: 0;
+                }
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+
+                .form-group {
+                    margin-bottom: 15px;
+
+                    label {
+                        display: block;
+                        margin-bottom: 10px;
+                        font-size: 14px;
+                        font-weight: 400;
+                        color: black;
+
+                        .mail-star {
+                            color: #F04438;
+                            font-size: 14px;
+                            font-family: 400;
+                        }
+                    }
+
+
+                    input[type="text"],
+                    input[type="number"],
+                    textarea {
+                        width: 100%;
+                        padding: 10px;
+                        border: 1px solid #B1B1B1;
+                        border-radius: 5px;
+                        font-size: 14px;
+                        color: #3B4754;
+                        resize: none;
+                    }
+
+                    textarea {
+                        height: 80px;
+                    }
+
+                    .mail-explaine {
+                        width: 100%;
+                        @include flex-container(space-between, flex-start);
+
+                        .toggle-container {
+                            display: flex;
+                            align-items: center;
+                            margin-bottom: 10px;
+
+                            label {
+                                margin-left: 10px;
+                                font-size: 14px;
+                                color: #707070;
+                            }
+
+                            input[type="checkbox"] {
+                                appearance: none;
+                                width: 40px;
+                                height: 20px;
+                                background-color: #B1B1B1;
+                                border-radius: 10px;
+                                position: relative;
+                                cursor: pointer;
+                                transition: background-color 0.3s ease;
+
+                                &:checked {
+                                    background-color: $dark-green;
+                                }
+
+                                &:checked::before {
+                                    transform: translateX(20px);
+                                }
+
+                                &::before {
+                                    content: '';
+                                    width: 18px;
+                                    height: 18px;
+                                    background-color: #fff;
+                                    border-radius: 50%;
+                                    position: absolute;
+                                    top: 1px;
+                                    left: 1px;
+                                    transition: transform 0.3s ease;
+                                }
+                            }
+                        }
+
+                    }
+
+                    .input-group {
+                        position: relative;
+                        width: 100%;
+                        @include flex-container(center, center);
+
+                        .text {
+                            width: 40%;
+                            padding: 10px;
+                            border: 1px solid #B1B1B1;
+                            border-radius: 5px;
+                            font-size: 14px;
+                            resize: none;
+
+                            &::placeholder {
+                                color: black;
+                                font-size: 14px;
+                                font-weight: 400;
+                            }
+                        }
+
+                        .mail-num {
+                            border-radius: 6px;
+                            padding: 10px 10px 10px 44px;
+                            border: 1px solid #D1D5DB;
+                        }
+
+                        div {
+                            width: 50%;
+                            @include flex-container(space-around, center);
+                        }
+                    }
+
+                    .document-header {
+                        width: 80%;
+                        @include flex-container(space-between, flex-start);
+                        margin-bottom: 10px;
+
+                    }
+                }
+
+                .statues-mail {
+                    width: 100%;
+                    @include flex-container(space-between, center);
+
+                    .toggle-button {
+                        display: flex;
+                        align-items: center;
+
+                        label {
+                            margin-left: 10px;
+                        }
+
+                        input[type="checkbox"] {
+                            appearance: none;
+                            width: 40px;
+                            height: 20px;
+                            background-color: #B1B1B1;
+                            border-radius: 10px;
+                            position: relative;
+                            cursor: pointer;
+                            transition: background-color 0.3s ease;
+
+                            &:checked {
+                                background-color: #8CC285;
+                            }
+
+                            &:checked::before {
+                                transform: translateX(20px);
+                            }
+
+                            &::before {
+                                content: '';
+                                width: 18px;
+                                height: 18px;
+                                background-color: #fff;
+                                border-radius: 50%;
+                                position: absolute;
+                                top: 1px;
+                                left: 1px;
+                                transition: transform 0.3s ease;
+                            }
+                        }
+                    }
+
+                    .statues-mail-item {
+                        width: 45%;
+                    }
+                }
+
+            }
+        }
+
+        .attachments-container {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            width: 32%;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+            .attachments-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 20px;
+
+                h2 {
+                    font-size: 1.2em;
+                    margin: 0;
+                    font-weight: 700
+                }
+
+                .attachment-icons {
+                    @include flex-container(space-between, center);
+
+                    img {
+                        margin-inline: 3px;
+                    }
+
+                    .attachment-plus {
+                        cursor: pointer;
+                    }
+
+                }
+
+                .modal {
+                    .modal-dialog {
+                        .modal-content {
+                            .modal-header {
+                                @include flex-container(space-between, center);
+
+                                .btn-close {
+                                    margin: 0px;
+                                    background-color: #F5F6F7;
+                                }
+
+                                h5 {
+                                    font-weight: 700;
+                                    font-size: 16px;
+                                }
+
+                            }
+
+                            .modal-body {
+                                form {
+                                    .form-group {
+                                        margin-bottom: 15px;
+
+                                        label {
+                                            display: block;
+                                            font-size: 0.9em;
+                                            margin-bottom: 5px;
+                                        }
+
+                                        input.form-control,
+                                        select.form-control {
+                                            width: 100%;
+                                            padding: 8px;
+                                            font-size: 0.9em;
+                                            border: 1px solid #ddd;
+                                            border-radius: 4px;
+                                            outline: none;
+
+                                            &:focus {
+                                                border-color: black;
+                                                box-shadow: none;
+                                            }
+                                        }
+                                        .attachment-title{
+                                            .red-star{
+                                                color: red;
+                                                font-size: 14px;
+                                            }
+                                        }
+                                        #fileInput {
+                                            display: none;
+                                        }
+                                    }
+
+                                    .upload-section {
+                                        text-align: center;
+                                        background-color: #F7FAF7;
+
+                                        .upload-box {
+                                            border: 0.5px dashed #8CC285;
+                                            border-radius: 4px;
+                                            padding: 20px;
+                                            background-color: #f9f9f9;
+
+                                            img {
+                                                display: block;
+                                                margin: 0 auto 10px;
+                                            }
+
+                                            p {
+                                                font-size: 0.9em;
+                                                color: #555;
+                                                margin: 0;
+                                            }
+
+                                            .upload-modal {
+                                                color: $dark-green;
+                                            }
+                                        }
+                                    }
+
+                                    .save-modal {
+                                        width: 100%;
+                                        @include flex-container(flex-end, center);
+                                        .save-btn {
+                                            width: 30%;
+                                            padding: 10px;
+                                            background: $gradient-green;
+                                            color: #fff;
+                                            border: none;
+                                            border-radius: 4px;
+                                            font-size: 1em;
+                                            cursor: pointer;
+                                            margin-top: 20px;
+
+                                            &:hover {
+                                                background-color: #7bb64a;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .attachments-list {
+                max-height: 450px;
+                overflow-y: auto;
+                scroll-behavior: smooth; // Enables smooth scrolling
+
+                &::-webkit-scrollbar {
+                    width: 6px;
+                    background-color: #f5f5f5;
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    background-color: $light-gray;
+                    border-radius: 10px;
+                }
+
+                .attachment-card {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 10px;
+                    border: 1px solid #eee;
+                    border-radius: 5px;
+                    margin-bottom: 10px;
+
+                    .attachment-details {
+                        p {
+                            margin: 0;
+                            font-size: 14px;
+                            color: black;
+                            margin-block-end: 5px;
+                        }
+
+                        .attachment-date {
+                            font-size: 13px;
+                        }
+
+                        .attachment-type {
+                            color: #aaa;
+                        }
+                    }
+
+                    .attachment-details-icon {
+                        @include flex-container(flex-start, center);
+
+                        img {
+                            margin-inline-end: 7px;
+                        }
+                    }
+
+                    .attachment-text {
+                        margin-inline-start: 25px;
+                    }
+                }
+            }
+        }
+    }
+
+    .main-btn {
+        width: 100%;
+        @include flex-container(flex-end, center);
+        margin-block: 1.5rem;
+
+        .mail-submit {
+            width: 9.375rem;
+            height: 2.75rem;
+            background: $gradient-green;
+            padding: var(--4, 1rem);
+            @include flex-container(center, center);
+            border: none;
+            border-radius: 6px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: #466143;
+            }
+        }
+    }
+}
+
+@media (max-width:1400px) {
+    .create-mail {
+        .create-mail-mainpart {
+            .form-container {
+                .input-group {
+                    flex-direction: column;
+
+                    div {
+                        margin-block: 5px;
+                        width: 100% !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:1200px) {
+    .create-mail {
+        .create-mail-mainpart {
+            flex-direction: column;
+            align-items: center;
+
+            .form-container,
+            .attachments-container {
+                width: 95%;
+            }
+
+            .attachments-container {
+                margin-block: 10px;
+            }
+        }
+
+        .main-btn {
+            .mail-submit {
+                margin-inline-end: 24px;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .create-mail {
+        .create-mail-mainpart {
+            .form-container {
+                padding: 15px;
+
+                .form-header {
+                    flex-direction: column;
+
+                    h2 {
+                        margin-block-end: 10px;
+                    }
+                }
+
+                form .form-group label {
+                    font-size: 12px;
+                }
+
+                form .form-group input[type="text"],
+                form .form-group input[type="number"],
+                form .form-group textarea {
+                    font-size: 12px;
+                }
+
+                form button {
+                    font-size: 14px;
+                }
+
+                .statues-mail {
+                    flex-direction: column;
+
+                    .statues-mail-item {
+                        width: 100% !important;
+                    }
+                }
+            }
+        }
+    }
+}

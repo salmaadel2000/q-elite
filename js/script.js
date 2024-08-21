@@ -14,6 +14,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 pageUrl = 'صادر/content.html';
             } else if (page === 'الموارد البشرية') {
                 pageUrl = 'الموارد البشرية/content.html';
+            } else if (page === 'إنشاء بريد داخلي') {
+                pageUrl = 'صادر/create-mail.html';
+            }
+            else if (page === "الارشيف") {
+                pageUrl = 'صادر/archieve.html';
             }
 
             // Load the content dynamically
@@ -38,40 +43,45 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Handle .main click to add 'active' class
     const mains = document.querySelectorAll('.links');
-
     mains.forEach(main => {
         main.addEventListener('click', function() {
             mains.forEach(item => item.classList.remove('active'));
             this.classList.add('active');
         });
     });
-});
 
-document.addEventListener('DOMContentLoaded', () => {
+    // Handle transaction-item click to add 'active' class
     const transactionItems = document.querySelectorAll('.transaction-item');
-
     transactionItems.forEach(item => {
         item.addEventListener('click', () => {
- 
             transactionItems.forEach(i => i.classList.remove('active'));
- 
             item.classList.add('active');
         });
     });
 });
 
-
 function toggleCollapse(button) {
     const isExpanded = button.getAttribute('aria-expanded') === 'true';
     const img = document.getElementById('toggleImage');
-    const img2 = document.getElementById('toggleImage2');
+    
     if (isExpanded) {
         button.setAttribute('aria-expanded', 'false');
         img.src = './assets/images/chevron-up.png'; // Image when collapsed
-        img2.src='./assets/images/chevron-up.png';
     } else {
         button.setAttribute('aria-expanded', 'true');
         img.src = './assets/images/chevron-down.png';  // Image when expanded
-        img2.src='./assets/images/chevron-down.png';
     }
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const uploadBox = document.getElementById('uploadBox');
+    const fileInput = document.getElementById('fileInput');
+    if (uploadBox && fileInput) {
+        uploadBox.addEventListener('click', function() {
+            fileInput.click();
+        });
+    }
+    else{
+        console.log("item not found")
+    }
+});
