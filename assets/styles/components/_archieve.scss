@@ -1,12 +1,11 @@
 .archieve {
-
     .archieve-container {
         padding: 10px 20px; // Adjust padding for spacing
         display: flex;
         align-items: center;
         justify-content: space-between;
 
-        .archieve {
+        .archieve-ul {
             display: flex;
             align-items: center;
             list-style: none;
@@ -109,6 +108,7 @@
             align-items: center;
             padding: 20px 0px;
             border-radius: 10px;
+            margin-inline: 10px;
 
             .archieves {
                 display: flex;
@@ -195,51 +195,120 @@
         }
 
         .sec-container {
+            margin-inline: 10px;
+
             .table {
                 table-layout: fixed;
+                border-radius: 4px;
+
+                th {
+                    padding-block: 12px;
+                    border: none;
+                }
 
                 .table-archive {
                     background-color: #F2F4F5;
+
                     .one {
-                        width: 200px;
+                        width: 300px;
                     }
-                    .two,.three{
-                        width: 60px;
+
+                    .two,
+                    .three {
+                        width: 40px;
                         text-align: center;
                     }
-                    .hidden{
-                        width: 20px;
+
+                    .hidden {
+                        width: 15px;
                     }
-                    .th-arch{
-                        width: 20px;
+
+                    .th-arch {
+                        width: 15px;
+                    }
+
+                    th {
+                        font-size: 14px;
+                        font-weight: 700;
                     }
                 }
-                tbody{
-                    background-color: white;
-                    .tr-archieve{
-                        .td-archieve{
-                          text-align: center;
-                          
-                        }
-                        .zero-arch{
-                            display: flex;
-                            align-items: center;
-                            justify-content:center;
+
+                tbody {
+                    .tr-archieve {
+                        .td-archieve {
+                            text-align: center;
 
                         }
+
+                        .zero-arch {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            color: $dark-green;
+                        }
+                    }
+
+                    td {
+                        font-size: 16px;
+                        font-weight: 400;
+                        padding-block: 15px;
+                        text-align: center;
+                    }
+
+                    .tr-archieve:nth-child(4n+1),
+                    .tr-archieve:nth-child(4n+2) {
+                        background-color: white;
+                    }
+
+                    .tr-archieve:nth-child(4n+3),
+                    .tr-archieve:nth-child(4n+4) {
+                        background-color: #F8F9FA;
+                    }
+
+                    tr {
+                        font-size: 16px;
                     }
                 }
             }
 
-            .pagination {
-                .page-link {
-                    color: #6c757d;
+            .page-archieve {
+                width: 100%;
 
-                    &:hover {
-                        color: #343a40;
+                .pagination {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    .page-item {
+                        width: 20%;
+                        padding-block-end: 20px;
+
+                        .page-link {
+                            justify-content: space-between;
+                            display: flex;
+                            color: black;
+                            border: none;
+                            background-color: transparent;
+                            font-size: 14px;
+                            font-weight: 400;
+
+                            &:hover {
+                                color: #343a40;
+                            }
+
+                        }
+
+                        .page-link-2 {
+                            width: 100%;
+                        }
+
+                        .page-link-1 {
+                            width: 32%;
+                        }
                     }
-                }
 
+                }
             }
 
         }
@@ -247,4 +316,181 @@
 
     }
 
+}
+
+@media (max-width:1460px) {
+    .archieve {
+        .archieve-main {
+            .archieve-search-section {
+                .archieves {
+                    flex-direction: column;
+
+                    .search-bar {
+                        order: 1;
+                        width: 100%;
+                    }
+
+                    .archieve-buttons {
+                        order: 2;
+                        margin-block-start: 10px;
+                    }
+
+                    .archieve-buttons {
+                        width: 100%;
+
+                        .custoum-butn {
+                            width: 100%;
+
+                            .archieve-btn {
+                                .dropdown-toggle {
+                                    img {
+                                        margin-inline: 10px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .sec-container {
+                max-width: 100%;
+                overflow-y: auto;
+                margin: 0;
+
+                .table {
+                    table-layout: fixed;
+
+                    .table-archive {
+                        width: 100%;
+                        .one {
+                            width: 400px;
+                        }
+
+                        .two,
+                        .three {
+                            width: 150px;
+                        
+                        }
+
+                        .hidden {
+                            width: 30px;
+                        }
+
+                        .th-arch {
+                            width: 30px;
+                        }
+
+                    }
+                    tbody {
+                        .tr-archieve {
+                            .zero-arch {
+                                display: table-cell;
+                            }
+                        }
+                    }
+                }
+
+                .page-archieve {
+                    .pagination {
+                        .page-item {
+                            width: 30%;
+
+                            .page-link {}
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+@media (max-width:1200px) {
+    .archieve {
+        width: 100%;
+        margin-top: 0px;
+
+        .archieve-main {
+            .archieve-search-section {
+                .archieves {
+
+                    .archieve-buttons {
+                        align-items: flex-start;
+
+                        .custoum-butn {
+                            flex-wrap: wrap;
+                            justify-content: flex-start;
+
+                            .archieve-btn {
+                                width: 46%;
+                                margin-block: 5px;
+
+                                .btn {
+                                    width: 100%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .sec-container{
+                .page-archieve {
+                    .pagination {
+                        .page-item {
+                            width: 50%;
+
+                            .page-link {}
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:600px) {
+    .archieve {
+        .archieve-container {
+            flex-direction: column;
+            justify-content: center;
+
+            .archieve-ul {
+                margin-block-end: 20px;
+            }
+        }
+
+        .archieve-main {
+            .archieve-search-section {
+                .archieves {
+                    .search-bar {
+                        input[type="text"] {
+                            font-size: 12px;
+                        }
+                    }
+
+                    .archieve-buttons {
+                        .custoum-butn {
+                            .archieve-btn {
+                                width: 95%;
+                            }
+                        }
+                    }
+                }
+            }
+            .sec-container{
+                .page-archieve {
+                    .pagination {
+                        flex-direction: column;
+                        .page-item {
+                            width: 80%;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

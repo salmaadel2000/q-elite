@@ -10,15 +10,15 @@ document.addEventListener('DOMContentLoaded', function() {
             const page = this.getAttribute('data-page');
             let pageUrl = '';
 
-            if (page === 'صادر') {
-                pageUrl = 'صادر/content.html';
-            } else if (page === 'الموارد البشرية') {
-                pageUrl = 'الموارد البشرية/content.html';
+            if (page === 'sader') {
+                pageUrl = 'sader/content.html';
+            } else if (page === 'human-resouce') {
+                pageUrl = 'human-resouce/content.html';
             } else if (page === 'إنشاء بريد داخلي') {
-                pageUrl = 'صادر/create-mail.html';
+                pageUrl = 'sader/create-mail.html';
             }
             else if (page === "الارشيف") {
-                pageUrl = 'صادر/archieve.html';
+                pageUrl = 'sader/archieve.html';
             }
 
             // Load the content dynamically
