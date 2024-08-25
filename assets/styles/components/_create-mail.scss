@@ -1,50 +1,50 @@
 .create-mail {
     .create-mail-container {
         padding: 10px 20px; // Adjust padding for spacing
-    }
 
-    .create-mail {
-        display: flex;
-        align-items: center;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-
-        .create-mail-item {
+        .create-mail-ul {
             display: flex;
             align-items: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
 
-            &:not(:last-child) {
-                margin-right: 5px; // Spacing between create-mail items
-            }
+            .create-mail-item {
+                display: flex;
+                align-items: center;
 
-            a {
-                color: $icon-color;
-                text-decoration: none;
-                font-weight: 400; // Bold text for links
-                font-size: 16px;
-                cursor: pointer;
-
-                &:hover {
-                    text-decoration: underline;
+                &:not(:last-child) {
+                    margin-right: 5px; // Spacing between create-mail items
                 }
-            }
 
-            span {
-                color: #b1b1b1; // Color for separator and inactive items
-                margin: 0 5px;
-                font-size: 14px;
-            }
+                a {
+                    color: $icon-color;
+                    text-decoration: none;
+                    font-weight: 400; // Bold text for links
+                    font-size: 16px;
+                    cursor: pointer;
 
-            &.active a {
-                color: black;
-            }
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
 
-            .fa-home {
-                font-size: 16px; // Icon size
+                span {
+                    color: #b1b1b1; // Color for separator and inactive items
+                    margin: 0 5px;
+                    font-size: 14px;
+                }
 
-                &:hover {
-                    color: $dark-green;
+                &.active a {
+                    color: black;
+                }
+
+                .fa-home {
+                    font-size: 16px; // Icon size
+
+                    &:hover {
+                        color: $dark-green;
+                    }
                 }
             }
         }
@@ -271,8 +271,224 @@
                     .statues-mail-item {
                         width: 45%;
                     }
-                }
 
+                    #staticBackdrop {
+                        .modal-dialog {
+                            max-width: 900px;
+                        }
+
+                        .frame-header {
+                            border-bottom: 1px solid #dee2e6;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+
+                            .frame-frist-div {
+                                display: flex;
+                                align-items: center;
+                                justify-content: flex-start;
+                                width: 90%;
+
+                                .frame-title {
+                                    font-size: 15px;
+                                    font-weight: 700;
+                                    cursor: pointer;
+                                }
+                            }
+
+                            .frame-sec-div {
+                                display: flex;
+                                align-items: center;
+                                justify-content: flex-end;
+                                background-color: #F5F6F7;
+
+                                .frame-btn {
+                                    margin: 0px;
+                                }
+                            }
+                        }
+
+                        .modal-body {
+                            .radio-buttons {
+                                display: flex;
+                                justify-content: flex-start;
+                                align-items: center;
+                                gap: 15px;
+                                padding-block: 20px;
+
+                                .form-check {
+                                    .form-check-input {
+                                        &:checked {
+                                            background-color: $dark-green;
+                                            border-color: $dark-green;
+
+                                            ~.form-check-label {
+                                                color: $dark-green;
+                                            }
+                                        }
+
+                                        &:focus {
+                                            border-color: #4cae4c;
+                                            box-shadow: none;
+                                        }
+                                    }
+                                }
+
+                            }
+
+                            .table {
+        
+                                thead {
+                                    background-color: #F2F4F5;
+
+                                    th {
+                                        text-align: right;
+                                        border-style: none;
+                                    }
+
+                                    .frist-frame-th {
+                                        padding-block-end: 15px;
+                                    }
+
+                                    .input-frame-th {
+                                        position: relative;
+
+                                        input {
+                                            width: 80%;
+
+                                            &::placeholder {
+                                                padding-inline-start: 15px;
+                                                font-size: 12px;
+                                                font-weight: 400;
+                                            }
+
+                                            border: 1px solid #D1D5DB;
+
+                                            &:active {
+                                                border: 1px solid #bbbec2;
+                                                box-shadow: none;
+                                            }
+
+                                            &:focus {
+                                                border: 1px solid #bbbec2;
+                                                box-shadow: none;
+                                            }
+                                        }
+
+                                        .Icon-frame-ser {
+                                            position: absolute;
+                                            top: 22px;
+                                            right: 15px;
+                                        }
+                                    }
+
+                                }
+
+                                tbody {
+                                    background-color: white;
+
+                                    tr {
+                                        background-color: white;
+
+                                        &:last-of-type {
+                                            border: transparent;
+                                        }
+
+                                        td {
+                                            min-width: 100px;
+                                            .form-check {
+                                                .form-check-input {
+                                                    &:checked {
+                                                        background-color: $dark-green;
+                                                        border-color: $dark-green;
+
+                                                        ~.form-check-label {
+                                                            color: $dark-green;
+                                                        }
+                                                    }
+
+                                                    &:focus {
+                                                        border-color: #4cae4c;
+                                                        box-shadow: none;
+                                                    }
+                                                }
+                                            }
+
+                                            .para-frame {
+                                                font-size: 13px;
+                                                font-weight: 400;
+                                                padding-top: 6px;
+                                                text-wrap: nowrap;
+                                            }
+
+                                            .filter-btn {
+                                                background-color: #EEEEEE;
+                                                border-radius: 4px;
+
+                                                .dropdown-toggle {
+                                                    display: flex;
+                                                    align-items: center;
+                                                    justify-content: space-between;
+                                                    font-size: 13px;
+                                                    font-weight: 400;
+                                                    padding-block: 10px;
+
+                                                    img {
+                                                        margin-inline: 10px;
+                                                    }
+
+                                                    &::after {
+                                                        display: none;
+                                                    }
+
+                                                    &:focus {
+                                                        box-shadow: none;
+                                                    }
+                                                }
+                                            }
+
+                                            .input-frame-td {
+                                                width: 100%;
+
+                                                &::placeholder {
+                                                    font-size: 12px;
+                                                    font-weight: 400;
+                                                }
+
+                                                border: 1px solid #D1D5DB;
+
+                                                &:active {
+                                                    border: 1px solid #bbbec2;
+                                                    box-shadow: none;
+                                                }
+
+                                                &:focus {
+                                                    border: 1px solid #bbbec2;
+                                                    box-shadow: none;
+                                                }
+                                            }
+                                        }
+                                       .table-td-min{
+                                        min-width: 100px;
+                                       }
+                                    }
+
+                                }
+                            }
+                        }
+
+                        .modal-footer {
+                            justify-content: flex-end;
+
+                            .btn-success {
+                                background: $gradient-green;
+                                border-color: #4cae4c;
+                            }
+                        }
+
+                    }
+
+                }
             }
         }
 
@@ -351,12 +567,14 @@
                                                 box-shadow: none;
                                             }
                                         }
-                                        .attachment-title{
-                                            .red-star{
+
+                                        .attachment-title {
+                                            .red-star {
                                                 color: red;
                                                 font-size: 14px;
                                             }
                                         }
+
                                         #fileInput {
                                             display: none;
                                         }
@@ -392,6 +610,7 @@
                                     .save-modal {
                                         width: 100%;
                                         @include flex-container(flex-end, center);
+
                                         .save-btn {
                                             width: 30%;
                                             padding: 10px;

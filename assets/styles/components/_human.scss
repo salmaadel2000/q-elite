@@ -238,8 +238,27 @@
 
                 .question-one,
                 .question-two {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
                     width: 50%;
                     margin-block: 10px;
+                    .form-check{
+                        .form-check-input{
+                            margin-right: 0px;
+                            &:active {
+                                background-color: $dark-green;
+                                border: 1px solid $dark-green;
+                                box-shadow: none;
+                            }
+                            &:focus , &:checked{
+                                background-color: $dark-green;
+                                border: 1px solid $dark-green;
+                                box-shadow: none;
+                            }
+
+                        }
+                    }
 
                 }
 

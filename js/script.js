@@ -85,3 +85,17 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log("item not found")
     }
 });
+
+
+// JavaScript to handle checkbox and modal display
+document.getElementById('account').addEventListener('change', function() {
+    const modal = new bootstrap.Modal(document.getElementById('customModal'));
+    
+    // If the checkbox is checked, show the modal
+    if (this.checked) {
+      modal.show();
+    } else {
+      modal.hide();
+    }
+  });
+  
