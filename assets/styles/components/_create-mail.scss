@@ -124,7 +124,7 @@
                     textarea {
                         width: 100%;
                         padding: 10px;
-                        border: 1px solid #B1B1B1;
+                        border: 1px solid var(--5, #D1D5DB);
                         border-radius: 5px;
                         font-size: 14px;
                         color: #3B4754;
@@ -190,9 +190,9 @@
                         @include flex-container(center, center);
 
                         .text {
-                            width: 40%;
+                            width: 45%;
                             padding: 10px;
-                            border: 1px solid #B1B1B1;
+                            border: 1px solid var(--5, #D1D5DB);
                             border-radius: 5px;
                             font-size: 14px;
                             resize: none;
@@ -207,12 +207,16 @@
                         .mail-num {
                             border-radius: 6px;
                             padding: 10px 10px 10px 44px;
-                            border: 1px solid #D1D5DB;
+                            border: 1px solid var(--5, #D1D5DB);
+                          
                         }
-
+                         .sec-num{
+                            margin-inline-start: 30px;
+                         }
                         div {
                             width: 50%;
-                            @include flex-container(space-around, center);
+                            @include flex-container(space-between, center);
+                           
                         }
                     }
 
@@ -730,15 +734,22 @@
     .create-mail {
         .create-mail-mainpart {
             .form-container {
+                form{
+                .form-group{
                 .input-group {
                     flex-direction: column;
 
                     div {
                         margin-block: 5px;
-                        width: 100% !important;
+                        width: 100% ;
+                        .sec-num{
+                            margin-inline-start: 0px;
+                         }
                     }
                 }
             }
+            }
+        }
         }
     }
 }

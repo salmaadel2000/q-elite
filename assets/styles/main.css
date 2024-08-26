@@ -1054,7 +1054,7 @@ body {
 .create-mail .create-mail-mainpart .form-container form .form-group textarea {
   width: 100%;
   padding: 10px;
-  border: 1px solid #B1B1B1;
+  border: 1px solid var(--5, #D1D5DB);
   border-radius: 5px;
   font-size: 14px;
   color: #3B4754;
@@ -1116,9 +1116,9 @@ body {
   align-items: center;
 }
 .create-mail .create-mail-mainpart .form-container form .form-group .input-group .text {
-  width: 40%;
+  width: 45%;
   padding: 10px;
-  border: 1px solid #B1B1B1;
+  border: 1px solid var(--5, #D1D5DB);
   border-radius: 5px;
   font-size: 14px;
   resize: none;
@@ -1136,12 +1136,15 @@ body {
 .create-mail .create-mail-mainpart .form-container form .form-group .input-group .mail-num {
   border-radius: 6px;
   padding: 10px 10px 10px 44px;
-  border: 1px solid #D1D5DB;
+  border: 1px solid var(--5, #D1D5DB);
+}
+.create-mail .create-mail-mainpart .form-container form .form-group .input-group .sec-num {
+  margin-inline-start: 30px;
 }
 .create-mail .create-mail-mainpart .form-container form .form-group .input-group div {
   width: 50%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 .create-mail .create-mail-mainpart .form-container form .form-group .document-header {
@@ -1554,12 +1557,15 @@ body {
 }
 
 @media (max-width: 1400px) {
-  .create-mail .create-mail-mainpart .form-container .input-group {
+  .create-mail .create-mail-mainpart .form-container form .form-group .input-group {
     flex-direction: column;
   }
-  .create-mail .create-mail-mainpart .form-container .input-group div {
+  .create-mail .create-mail-mainpart .form-container form .form-group .input-group div {
     margin-block: 5px;
-    width: 100% !important;
+    width: 100%;
+  }
+  .create-mail .create-mail-mainpart .form-container form .form-group .input-group div .sec-num {
+    margin-inline-start: 0px;
   }
 }
 @media (max-width: 1200px) {
