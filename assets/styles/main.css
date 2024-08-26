@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   font-family: "Almarai", sans-serif;
 }
@@ -1174,7 +1175,7 @@ body {
   transition: background-color 0.3s ease;
 }
 .create-mail .create-mail-mainpart .form-container form .statues-mail .toggle-button input[type=checkbox]:checked {
-  background-color: #8CC285;
+  background-color: #41843A;
 }
 .create-mail .create-mail-mainpart .form-container form .statues-mail .toggle-button input[type=checkbox]:checked::before {
   transform: translateX(20px);
@@ -2152,6 +2153,38 @@ body {
 .human .human-main .tab-content .questions .question input[type=checkbox]:checked + .checkmark {
   background-color: #41843A;
   color: #41843A;
+}
+.human .human-main .tab-content .questions .question .form-check-input[type=radio] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #707070;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  background-color: transparent;
+  margin-right: 8px;
+}
+.human .human-main .tab-content .questions .question .form-check-input[type=radio]:checked {
+  background-color: #41843A;
+  border-color: #41843A;
+  background-image: none;
+}
+.human .human-main .tab-content .questions .question .form-check-input[type=radio]:checked::before {
+  content: "✔";
+  display: block;
+  color: white;
+  font-size: 14px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.human .human-main .tab-content .questions .question .form-check-label {
+  cursor: pointer;
 }
 .human .human-main .tab-content .questions .question-one,
 .human .human-main .tab-content .questions .question-two {
