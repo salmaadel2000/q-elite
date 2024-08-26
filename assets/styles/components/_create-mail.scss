@@ -306,6 +306,11 @@
                                     margin: 0px;
                                 }
                             }
+                            button{
+                                &:focus{
+                                    box-shadow: none;
+                                }
+                            }
                         }
 
                         .modal-body {
@@ -535,6 +540,9 @@
                                 .btn-close {
                                     margin: 0px;
                                     background-color: #F5F6F7;
+                                    &:focus{
+                                        box-shadow: none;
+                                    }
                                 }
 
                                 h5 {

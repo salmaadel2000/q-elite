@@ -1225,6 +1225,9 @@ body {
 .create-mail .create-mail-mainpart .form-container form .statues-mail #staticBackdrop .frame-header .frame-sec-div .frame-btn {
   margin: 0px;
 }
+.create-mail .create-mail-mainpart .form-container form .statues-mail #staticBackdrop .frame-header button:focus {
+  box-shadow: none;
+}
 .create-mail .create-mail-mainpart .form-container form .statues-mail #staticBackdrop .modal-body .radio-buttons {
   display: flex;
   justify-content: flex-start;
@@ -1400,6 +1403,9 @@ body {
 .create-mail .create-mail-mainpart .attachments-container .attachments-header .modal .modal-dialog .modal-content .modal-header .btn-close {
   margin: 0px;
   background-color: #F5F6F7;
+}
+.create-mail .create-mail-mainpart .attachments-container .attachments-header .modal .modal-dialog .modal-content .modal-header .btn-close:focus {
+  box-shadow: none;
 }
 .create-mail .create-mail-mainpart .attachments-container .attachments-header .modal .modal-dialog .modal-content .modal-header h5 {
   font-weight: 700;
@@ -1813,6 +1819,9 @@ body {
   font-weight: 400;
   padding-block: 15px;
   text-align: center;
+}
+.archieve .archieve-main .sec-container .table tbody td .open-col {
+  cursor: pointer;
 }
 .archieve .archieve-main .sec-container .table tbody .tr-archieve:nth-child(4n+1),
 .archieve .archieve-main .sec-container .table tbody .tr-archieve:nth-child(4n+2) {
