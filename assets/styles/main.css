@@ -1936,9 +1936,6 @@ body {
   .archieve .archieve-main .sec-container .table .table-archive .th-arch {
     width: 30px;
   }
-  .archieve .archieve-main .sec-container .table tbody .tr-archieve .zero-arch {
-    display: table-cell;
-  }
   .archieve .archieve-main .sec-container .page-archieve .pagination .page-item {
     width: 30%;
   }
