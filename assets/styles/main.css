@@ -1834,6 +1834,20 @@ body {
 .archieve .archieve-main .sec-container .table tbody tr {
   font-size: 16px;
 }
+.archieve .archieve-main .sec-container .table tbody .tr-archieve[aria-expanded=true] .open-col {
+  cursor: pointer;
+  display: block;
+}
+.archieve .archieve-main .sec-container .table tbody .tr-archieve[aria-expanded=true] .close-col {
+  display: none;
+}
+.archieve .archieve-main .sec-container .table tbody .tr-archieve[aria-expanded=false] .open-col {
+  display: none;
+}
+.archieve .archieve-main .sec-container .table tbody .tr-archieve[aria-expanded=false] .close-col {
+  display: block;
+  cursor: pointer;
+}
 .archieve .archieve-main .sec-container .page-archieve {
   width: 100%;
 }

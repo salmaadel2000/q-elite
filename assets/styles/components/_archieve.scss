@@ -271,6 +271,28 @@
                     tr {
                         font-size: 16px;
                     }
+                    .tr-archieve {
+                        &[aria-expanded="true"] {
+                          .open-col {
+                            cursor: pointer;
+                            display: block;
+                          }
+                          .close-col {
+                            display: none;
+                          }
+                        }
+                      
+                        &[aria-expanded="false"] {
+                          .open-col {
+                            display: none;
+                          }
+                          .close-col {
+                            display: block;
+                            cursor: pointer;
+                          }
+                        }
+                      }
+                      
                 }
             }
 
