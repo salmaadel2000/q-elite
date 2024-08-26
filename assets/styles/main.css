@@ -1724,7 +1724,7 @@ body {
   border: 1px solid #CCC;
   border-radius: 8px;
   overflow: hidden;
-  width: 45%;
+  width: 40%;
   margin-inline-end: 5px;
 }
 .archieve .archieve-main .archieve-search-section .archieves .search-bar input[type=text] {
@@ -1798,18 +1798,18 @@ body {
   background-color: #F2F4F5;
 }
 .archieve .archieve-main .sec-container .table .table-archive .one {
-  width: 300px;
+  width: 298px;
 }
 .archieve .archieve-main .sec-container .table .table-archive .two,
 .archieve .archieve-main .sec-container .table .table-archive .three {
-  width: 40px;
+  width: 48px;
   text-align: center;
 }
 .archieve .archieve-main .sec-container .table .table-archive .hidden {
-  width: 15px;
+  width: 13px;
 }
 .archieve .archieve-main .sec-container .table .table-archive .th-arch {
-  width: 15px;
+  width: 13px;
 }
 .archieve .archieve-main .sec-container .table .table-archive th {
   font-size: 14px;
@@ -1829,6 +1829,7 @@ body {
   font-weight: 400;
   padding-block: 15px;
   text-align: center;
+  border-bottom-width: 0px;
 }
 .archieve .archieve-main .sec-container .table tbody td .open-col {
   cursor: pointer;
@@ -1896,7 +1897,7 @@ body {
   }
   .archieve .archieve-main .archieve-search-section .archieves .search-bar {
     order: 1;
-    width: 96%;
+    width: 99%;
   }
   .archieve .archieve-main .archieve-search-section .archieves .archieve-buttons {
     order: 2;
