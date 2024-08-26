@@ -122,6 +122,7 @@ body {
   padding: 10px 16px;
 }
 .container-fluid .parent .sidebar .nav-link,
+.container-fluid .parent .sidebar .nav-new,
 .container-fluid .parent .sidebar .close {
   position: relative;
   color: #6E7887;
@@ -155,6 +156,7 @@ body {
   color: #B1B1B1;
   font-size: 15px;
   padding: 10px 40px 10px 42px;
+  font-weight: 700;
 }
 .container-fluid .parent .sidebar .nav-item .collapse .card .dropdown-item:hover {
   color: #41843A;
