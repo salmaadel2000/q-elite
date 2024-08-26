@@ -91,21 +91,25 @@ document.addEventListener('DOMContentLoaded', function () {
     const checkbox = document.getElementById('account');
     const modal = document.getElementById('staticBackdrop');
 
-    // Add event listener for when the modal is shown
-    modal.addEventListener('shown.bs.modal', function () {
-        checkbox.checked = true;
-    });
+    if (checkbox && modal) {
+        // Add event listener for when the modal is shown
+        modal.addEventListener('shown.bs.modal', function () {
+            checkbox.checked = true;
+        });
 
-    // Add event listener for when the modal is hidden
-    modal.addEventListener('hidden.bs.modal', function () {
-        checkbox.checked = false;
-    });
+        // Add event listener for when the modal is hidden
+        modal.addEventListener('hidden.bs.modal', function () {
+            checkbox.checked = false;
+        });
 
-    // Add event listener for checkbox toggle
-    checkbox.addEventListener('change', function () {
-        if (!checkbox.checked) {
-            const modalInstance = bootstrap.Modal.getInstance(modal);
-            modalInstance.hide();
-        }
-    });
+        // Add event listener for checkbox toggle
+        checkbox.addEventListener('change', function () {
+            if (!checkbox.checked) {
+                const modalInstance = bootstrap.Modal.getInstance(modal);
+                modalInstance.hide();
+            }
+        });
+    } else {
+        console.log('Checkbox or modal element not found.');
+    }
 });

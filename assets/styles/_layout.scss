@@ -1,5 +1,6 @@
 body {
     font-family: 'Almarai', sans-serif; // Set the global font family
+    background-color: #F8F9FA;
 }
 
 .header {
@@ -13,13 +14,13 @@ body {
 
         .item {
             margin-inline: 6px; // Set margin inline (left/right) for spacing
-            height: 17px; // Set fixed height
         }
     }
 }
 
 .navbar {
     box-shadow: 0 6px 6px -4px #EBEAED, 0 -4px 4px -4px #EBEAED; // Apply shadow effects for top and bottom
+    padding: 0px;
 
     .dropdown {
         .btn:focus {
@@ -93,318 +94,376 @@ body {
         }
     }
 }
-.container-fluid{
-.parent {
-    @include flex-container(space-between, flex-start);
-       height: 88vh;
-    .sidebar {
-        width: 30%; // Set initial sidebar width
-        transition: width 0.3s; // Smooth width transition
-        position: relative;
-        padding-left: 0px;
-        box-shadow: -6px 0 6px -4px #EBEAED; // Shadow on the left side
-      height: 100%;
-        display: flex;
-        flex-direction: column; // Vertical layout
-        justify-content: space-between; // Space out items
-        align-items: center; // Center align items horizontally
 
-        .sidebar-ul {
-            padding-inline-start: 8px; // Padding at the start of the list
-            width: 100%; // Width of sidebar list
-            padding: 19px 0px; // Vertical padding for the list
+.container-fluid {
+    padding: 0px;
+    overflow: hidden;
+    .name {
+        font-size: 12px
+    }
 
-            li {
-                width: 95%;
-               
-                .links {
-                    margin-block: 4px; // Vertical margin for links
-                    padding: 10px 16px;
-                    &:hover {
-                        background-color: $dark-green; // Change background on hover
-                        color: white !important; // Change text color to white
-                        border-radius: 8px; // Rounded corners
-                        .icon-sidebar {
-                            color: white !important; // Change icon color on hover
-                        }
+    .logo {
+        margin-inline-start: 75px;
+    }
 
-                        .nav-link {
-                            color: white; // Change link color on hover              
-                        }
+    .parent {
+        @include flex-container(space-between, flex-start);
 
-                    }
-                }
+        .sidebar {
+            height: calc(100vh - 120px);
+            // overflow-y: scroll;
 
+            &::-webkit-scrollbar {
+                width: 6px;
+                background-color: #f5f5f5;
             }
-            .close-li{
-                padding: 10px 16px;
-            }
-        }
 
-        .nav-link,
-        .nav-new,
-        .close {
+            &::-webkit-scrollbar-thumb {
+                background-color: $light-gray;
+                border-radius: 10px;
+            }
+
+            background-color: white;
+            width: 30%; // Set initial sidebar width
+            transition: width 0.3s; // Smooth width transition
             position: relative;
-            color: #6E7887; // Default color for nav-link and close
-            font-size: 16px; // Font size for nav-link and close
-            font-weight: 700; // Font weight for nav-link and close
-            cursor: pointer; // Pointer cursor on hover
-            text-decoration: none; // Remove text decoration
-            padding: 2px 0px;
-        }
-
-        .close:hover {
-            color: #6E7887; // Hover color for close button
-        }
-
-        .close {
-            margin-inline-start: 13px; // Space to the left of the close button
-        }
-
-        .nav-item {
-            .icon-sidebar {
-                padding: 10px; // Padding for sidebar icons
-                color: $dark-green; // Set default icon color
-            }
-
-            .drop-img {
-                @include flex-container(space-between, center); // Space between items and center vertically
-                width: 90%; // Set width for drop-img
-            }
-
-            .collapse {
-                .card {
-                    border: none;
-                    text-align: start;
-
-                    .dropdown-item {
-                        color: $light-gray;
-                        font-size: 15px;
-                        padding:    10px 40px 10px 42px;
-                        font-weight: 700;
-                        &:hover {
-                            color: $dark-green ;
-                            background-color: transparent
-                        }
-
-                        &:active {
-                            background-color: transparent;
-                            color: $dark-green ;
-                            font-weight: 700;
-                        }
-
-                        &:focus {
-                            background-color: transparent;
-                            color: $dark-green ;
-                            font-weight: 700;
-                        }
-                    }
-                }
-            }
-
-            .hover-content {
-                display: none; // Initially hidden
-                 border-radius: 8px;
-                &.card-hover {
-                    border: none;
-                    text-align: start;
-
-                    .dropdown-item {
-                        color: black;
-                        font-size: .9375rem;
-
-                        &:hover {
-                            color: $dark-green;
-                            background-color: transparent;
-                        }
-
-                        &:active {
-                            background-color: transparent;
-                            color: $dark-green;
-                        }
-
-                        &:focus {
-                            background-color: transparent;
-                            color: $dark-green;
-                        }
-                    }
-                }
-            }
-
-        }
-
-        .custom-button {
-            background-color: #E69D16; // Set button background color
-            color: white; // Set button text color
-            border: none; // Remove border
-            border-radius: 12px; // Rounded corners for the button
-            padding: 12px 26px; // Button padding
-            font-size: 16px; // Font size for button text
-            font-weight: 400 !important;
-            cursor: pointer; // Pointer cursor on hover
+            padding-left: 0px;
+            box-shadow: -6px 0 6px -4px #EBEAED; // Shadow on the left side
             display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold; // Bold text for the button
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Add box shadow
-            margin-bottom: 20px; // Bottom margin for spacing
-            cursor: pointer; // Pointer cursor
-            width: 90%;
-            .para-btn{
-                margin: 0px;
-            }
-        }
-
-        .custom-button .icon {
-            margin-left: 10px; // Space to the left of the icon in the button
-            font-size: 20px; // Font size for the icon
-        }
-
-        .custom-button:hover {
-            background-color: #d88e13; // Change background color on hover
-        }
-
-        &.collapsed {
-            width: 90px;
-
-            .links {
-                .icon-sidebar {
-                    color: $light-gray; // Change icon color in collapsed state
-
-                    &:hover {
-                        color: white; // Change icon color on hover in collapsed state
-                    }
-                }
-            }
+            flex-direction: column; // Vertical layout
+            justify-content: space-between; // Space out items
+            align-items: center; // Center align items horizontally
 
             .sidebar-ul {
-                .nav-item {
-                    width: 76%;
+                padding-inline-start: 8px; // Padding at the start of the list
+                width: 100%; // Width of sidebar list
+                padding: 19px 0px; // Vertical padding for the list
 
-                    .collapse,
+                li {
+                    width: 95%;
+
+                    .links {
+                        margin-block: 4px; // Vertical margin for links
+                        padding: 10px 16px;
+
+                        &:hover {
+                            background-color: $dark-green; // Change background on hover
+                            color: white !important; // Change text color to white
+                            border-radius: 8px; // Rounded corners
+
+                            .icon-sidebar {
+                                color: white !important; // Change icon color on hover
+                            }
+
+                            .nav-link {
+                                color: white; // Change link color on hover              
+                            }
+
+                        }
+                    }
+
+                }
+
+                .close-li {
+                    padding: 10px 16px;
+                }
+            }
+
+            .nav-link,
+            .nav-new,
+            .close {
+                position: relative;
+                color: #6E7887; // Default color for nav-link and close
+                font-size: 16px; // Font size for nav-link and close
+                font-weight: 700; // Font weight for nav-link and close
+                cursor: pointer; // Pointer cursor on hover
+                text-decoration: none; // Remove text decoration
+                padding: 2px 0px;
+            }
+
+            .close:hover {
+                color: #6E7887; // Hover color for close button
+            }
+
+            .close {
+                margin-inline-start: 13px; // Space to the left of the close button
+            }
+
+            .nav-item {
+                .icon-sidebar {
+                    padding: 10px; // Padding for sidebar icons
+                    color: $dark-green; // Set default icon color
+                }
+
+                .drop-img {
+                    @include flex-container(space-between, center); // Space between items and center vertically
+                    width: 90%; // Set width for drop-img
+                }
+
+                .collapse {
                     .card {
-                        display: none !important;
-                    }
+                        border: none;
+                        text-align: start;
 
-                    .hover-content {
-                        position: absolute;
-                        right: 100%; // Adjust position to the right of the collapsed sidebar
-                        top: 0;
-                        display: none;
-                        width: 200px; // Adjust width as needed
-                        z-index: 10; // Ensure it appears above other content
-                        background-color: $background-content; // Same background as content
-                        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Add shadow
-                    }
+                        .dropdown-item {
+                            color: $light-gray;
+                            font-size: 15px;
+                            padding: 10px 40px 10px 42px;
+                            font-weight: 700;
 
-                    &:hover .hover-content {
-                        display: block; // Show on hover when sidebar is collapsed
-                    }
-                }
-            }
-            .custom-button{
-                padding: 17px 26px;
-                width: 70%;
-                .icon{
-                    margin: 0px;
-                }
-             }
-        }
-    }
+                            &:hover {
+                                color: $dark-green ;
+                                background-color: transparent
+                            }
 
-    .links.active {
-        background-color: #DFFFE6; // Active state background color
-        color: $dark-green !important; // Active state text color
-        border-radius: 6px; // Rounded corners for active state
-        padding: 5px 8px;
-        overflow: hidden;
-        ;
+                            &:active {
+                                background-color: transparent;
+                                color: $dark-green ;
+                                font-weight: 700;
+                            }
 
-        .icon-sidebar {
-            color: $dark-green !important; // Active state icon color
-        }
-    }
-
-    .content {
-        background-color: $background-content;
-    }
-}
-}
-@media (max-width:1200px) {
-    .container-fluid{
-    .parent {
-        flex-direction: column;
-         height: 100% !important;
-        .sidebar {
-            box-shadow: none;
-            width: 100% !important;
-            .close-img{
-                transform: rotate(271deg);
-            }
-            &.collapsed {
-                width: 100%; // Set width when sidebar is collapsed
-                .sidebar-ul {
-                    flex-direction: row !important;
-
-                    .nav-item {
-                        width: 24% !important;
-                        @include flex-container(center,center);
-                        .card-hover{
-                            right: 10%;
-                            top: 50px;
-                            z-index: 1;
-                        }
-                        .links{
-                            padding: 5px 10px;
+                            &:focus {
+                                background-color: transparent;
+                                color: $dark-green ;
+                                font-weight: 700;
+                            }
                         }
                     }
-                    .close-img{
-                        transform: rotate(89deg);
+                }
+
+                .hover-content {
+                    display: none; // Initially hidden
+                    border-radius: 8px;
+
+                    &.card-hover {
+                        border: none;
+                        text-align: start;
+
+                        .dropdown-item {
+                            color: black;
+                            font-size: .9375rem;
+
+                            &:hover {
+                                color: $dark-green;
+                                background-color: transparent;
+                            }
+
+                            &:active {
+                                background-color: transparent;
+                                color: $dark-green;
+                            }
+
+                            &:focus {
+                                background-color: transparent;
+                                color: $dark-green;
+                            }
+                        }
                     }
                 }
+
             }
 
             .custom-button {
-                margin-inline-start: 20px;
+                margin-block-end: 1rem;
+                background-color: #E69D16; // Set button background color
+                color: white; // Set button text color
+                border: none; // Remove border
+                border-radius: 12px; // Rounded corners for the button
+                padding: 12px 26px; // Button padding
+                font-size: 16px; // Font size for button text
+                font-weight: 400 !important;
+                cursor: pointer; // Pointer cursor on hover
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: bold; // Bold text for the button
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Add box shadow
+                cursor: pointer; // Pointer cursor
+                width: 90%;
+
+                .para-btn {
+                    margin: 0px;
+                }
             }
 
-            .sidebar-ul {
-                flex-direction: row !important;
-                justify-content: space-around;
-                .nav-item {
-                    width: 33% ;
+            .custom-button .icon {
+                margin-left: 10px; // Space to the left of the icon in the button
+                font-size: 20px; // Font size for the icon
+            }
+
+            .custom-button:hover {
+                background-color: #d88e13; // Change background color on hover
+            }
+
+            &.collapsed {
+                width: 90px;
+
+                .links {
+                    .icon-sidebar {
+                        color: $light-gray; // Change icon color in collapsed state
+
+                        &:hover {
+                            color: white; // Change icon color on hover in collapsed state
+                        }
+                    }
                 }
-               
+
+                .sidebar-ul {
+                    .nav-item {
+                        width: 76%;
+
+                        .collapse,
+                        .card {
+                            display: none !important;
+                        }
+
+                        .hover-content {
+                            position: absolute;
+                            right: 100%; // Adjust position to the right of the collapsed sidebar
+                            top: 0;
+                            display: none;
+                            width: 200px; // Adjust width as needed
+                            z-index: 10; // Ensure it appears above other content
+                            background-color: $background-content; // Same background as content
+                            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Add shadow
+                        }
+
+                        &:hover .hover-content {
+                            display: block; // Show on hover when sidebar is collapsed
+                        }
+                    }
+                }
+
+                .custom-button {
+                    padding: 17px 26px;
+                    width: 70%;
+
+                    .icon {
+                        margin: 0px;
+                    }
+                }
             }
         }
 
+        .links.active {
+            background-color: #DFFFE6; // Active state background color
+            color: $dark-green !important; // Active state text color
+            border-radius: 6px; // Rounded corners for active state
+            padding: 5px 8px;
+            overflow: hidden;
+            ;
+
+            .icon-sidebar {
+                color: $dark-green !important; // Active state icon color
+            }
+        }
+
+        .content {
+            background-color: $background-content;
+            height: calc(100vh - 120px);
+            overflow-y: scroll;
+
+            &::-webkit-scrollbar {
+                width: 6px;
+                background-color: #f5f5f5;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: $light-gray;
+                border-radius: 10px;
+            }
+
+        }
     }
 }
+
+@media (max-width:1200px) {
+    .container-fluid {
+        .parent {
+            flex-direction: column;
+            height: 100% !important;
+
+            .sidebar {
+                height: auto;
+                box-shadow: none;
+                width: 100% !important;
+
+                .close-img {
+                    transform: rotate(271deg);
+                }
+
+                &.collapsed {
+                    width: 100%; // Set width when sidebar is collapsed
+
+                    .sidebar-ul {
+                        flex-direction: row !important;
+
+                        .nav-item {
+                            width: 24% !important;
+                            @include flex-container(center, center);
+
+                            .card-hover {
+                                right: 10%;
+                                top: 50px;
+                                z-index: 1;
+                            }
+
+                            .links {
+                                padding: 5px 10px;
+                            }
+                        }
+
+                        .close-img {
+                            transform: rotate(89deg);
+                        }
+                    }
+                }
+
+                .custom-button {
+                    margin-inline-start: 20px;
+                }
+
+                .sidebar-ul {
+                    flex-direction: row !important;
+                    justify-content: space-around;
+
+                    .nav-item {
+                        width: 33%;
+                    }
+
+                }
+            }
+
+        }
+    }
 }
 
 @media (max-width:770px) {
-    .container-fluid{
-    .parent{
-        height: 100% !important;
-        .sidebar{
-            .sidebar-ul{
-                flex-direction: column !important;
-                .nav-item{
-                    width: 95%;
+    .container-fluid {
+        .parent {
+            height: 100% !important;
+
+            .sidebar {
+                .sidebar-ul {
+                    flex-direction: column !important;
+
+                    .nav-item {
+                        width: 95%;
+                    }
                 }
-            }
-            &.collapsed {
-                .sidebar-ul{
-                   
-                    .nav-item{
-                        .card-hover{
-                            right: -50% ;
-                            width: 150px ;
+
+                &.collapsed {
+                    .sidebar-ul {
+
+                        .nav-item {
+                            .card-hover {
+                                right: -50%;
+                                width: 150px;
+                            }
                         }
                     }
                 }
             }
         }
     }
-}
 }

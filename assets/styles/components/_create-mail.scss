@@ -1,6 +1,6 @@
 .create-mail {
     .create-mail-container {
-        padding: 10px 20px; // Adjust padding for spacing
+        padding: 10px 0px; // Adjust padding for spacing
 
         .create-mail-ul {
             display: flex;
@@ -52,9 +52,7 @@
 
     .create-mail-mainpart {
         @include flex-container(space-between, flex-start);
-        margin-top: 20px;
-
-        .form-container {
+     .form-container {
             width: 65%;
             padding: 20px;
             background-color: #fff;
@@ -196,7 +194,8 @@
                             border-radius: 5px;
                             font-size: 14px;
                             resize: none;
-                               background-color: #F8F8F8;
+                            background-color: #F8F8F8;
+
                             &::placeholder {
                                 color: black;
                                 font-size: 14px;
@@ -208,23 +207,36 @@
                             border-radius: 6px;
                             padding: 10px 10px 10px 44px;
                             border: 1px solid var(--5, #D1D5DB);
-                          
+
                         }
-                         .sec-num{
-                            margin-inline-start: 30px;
-                         }
+
                         div {
-                            width: 50%;
+                          
                             @include flex-container(space-between, center);
-                           
+
                         }
                     }
 
                     .document-header {
-                        width: 80%;
-                        @include flex-container(space-between, flex-start);
-                        margin-bottom: 10px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        justify-content: space-between;
+                        width: 45%;
 
+                        input {
+                            width: 50% !important;
+                        }
+                        div{
+                            width: 100%;
+                        }
+
+                    }
+
+                    &.form-doc-header {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
                     }
                 }
 
@@ -251,7 +263,7 @@
                             transition: background-color 0.3s ease;
 
                             &:checked {
-                                background-color:#12B76A;
+                                background-color: #12B76A;
                             }
 
                             &:checked::before {
@@ -274,7 +286,8 @@
 
                     .statues-mail-item {
                         width: 45%;
-                        input{
+
+                        input {
                             background-color: #F8F8F8;
                         }
                     }
@@ -313,15 +326,18 @@
                                     margin: 0px;
                                 }
                             }
-                            button{
-                                &:focus{
+
+                            button {
+                                &:focus {
                                     box-shadow: none;
                                 }
                             }
                         }
 
                         .modal-body {
+                            padding: 0px;
                             .radio-buttons {
+                                padding: 0px 1rem;
                                 display: flex;
                                 justify-content: flex-start;
                                 align-items: center;
@@ -349,17 +365,19 @@
                             }
 
                             .table {
-
+                               
                                 thead {
                                     background-color: #F2F4F5;
-
                                     th {
-                                        text-align: right;
+                                   
                                         border-style: none;
+                                        padding: .5rem 1rem;
+                                        border-bottom-width:0px ;
                                     }
 
                                     .frist-frame-th {
                                         padding-block-end: 15px;
+                                  
                                     }
 
                                     .input-frame-th {
@@ -390,7 +408,7 @@
                                         .Icon-frame-ser {
                                             position: absolute;
                                             top: 22px;
-                                            right: 15px;
+                                            right: 20px;
                                         }
                                     }
 
@@ -401,14 +419,14 @@
 
                                     tr {
                                         background-color: white;
-
+                                       
                                         &:last-of-type {
                                             border: transparent;
                                         }
 
                                         td {
                                             min-width: 100px;
-
+                                            padding: .5rem 1rem;
                                             .form-check {
                                                 .form-check-input {
                                                     &:checked {
@@ -547,7 +565,8 @@
                                 .btn-close {
                                     margin: 0px;
                                     background-color: #F5F6F7;
-                                    &:focus{
+
+                                    &:focus {
                                         box-shadow: none;
                                     }
                                 }
@@ -737,22 +756,29 @@
     .create-mail {
         .create-mail-mainpart {
             .form-container {
-                form{
-                .form-group{
-                .input-group {
-                    flex-direction: column;
+                form {
+                    .form-group {
+                        .input-group {
+                            flex-direction: column;
 
-                    div {
-                        margin-block: 5px;
-                        width: 100% ;
-                        .sec-num{
-                            margin-inline-start: 0px;
-                         }
+                            div {
+                                margin-block: 5px;
+                                width: 100%;
+
+                            }
+                        }
+                        &.form-doc-header{
+                            flex-direction: column;
+                            .document-header{
+                                width: 100%;
+                                input{
+                                    width: 45% !important;
+                                }
+                            }
+                        }
                     }
                 }
             }
-            }
-        }
         }
     }
 }
