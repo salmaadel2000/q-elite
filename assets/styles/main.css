@@ -1685,7 +1685,7 @@ body {
   transition: background-color 0.3s ease;
 }
 .archieve .archieve-container .toggle-container input[type=checkbox]:checked {
-  background-color: #41843A;
+  background-color: #12B76A;
 }
 .archieve .archieve-container .toggle-container input[type=checkbox]:checked::before {
   transform: translateX(20px);
@@ -1896,7 +1896,7 @@ body {
   }
   .archieve .archieve-main .archieve-search-section .archieves .search-bar {
     order: 1;
-    width: 100%;
+    width: 96%;
   }
   .archieve .archieve-main .archieve-search-section .archieves .archieve-buttons {
     order: 2;
@@ -1955,7 +1955,7 @@ body {
     justify-content: flex-start;
   }
   .archieve .archieve-main .archieve-search-section .archieves .archieve-buttons .custoum-butn .archieve-btn {
-    width: 46%;
+    width: 47%;
     margin-block: 5px;
   }
   .archieve .archieve-main .archieve-search-section .archieves .archieve-buttons .custoum-butn .archieve-btn .btn {
@@ -1975,6 +1975,9 @@ body {
   }
   .archieve .archieve-container .archieve-ul {
     margin-block-end: 20px;
+  }
+  .archieve .archieve-main .archieve-search-section .archieves .search-bar {
+    width: 96%;
   }
   .archieve .archieve-main .archieve-search-section .archieves .search-bar input[type=text] {
     font-size: 12px;
