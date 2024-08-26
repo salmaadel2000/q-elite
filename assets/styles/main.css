@@ -1092,7 +1092,7 @@ body {
   transition: background-color 0.3s ease;
 }
 .create-mail .create-mail-mainpart .form-container form .form-group .mail-explaine .toggle-container input[type=checkbox]:checked {
-  background-color: #41843A;
+  background-color: #12B76A;
 }
 .create-mail .create-mail-mainpart .form-container form .form-group .mail-explaine .toggle-container input[type=checkbox]:checked::before {
   transform: translateX(20px);
@@ -1122,6 +1122,7 @@ body {
   border-radius: 5px;
   font-size: 14px;
   resize: none;
+  background-color: #F8F8F8;
 }
 .create-mail .create-mail-mainpart .form-container form .form-group .input-group .text::-moz-placeholder {
   color: black;
@@ -1180,7 +1181,7 @@ body {
   transition: background-color 0.3s ease;
 }
 .create-mail .create-mail-mainpart .form-container form .statues-mail .toggle-button input[type=checkbox]:checked {
-  background-color: #41843A;
+  background-color: #12B76A;
 }
 .create-mail .create-mail-mainpart .form-container form .statues-mail .toggle-button input[type=checkbox]:checked::before {
   transform: translateX(20px);
@@ -1198,6 +1199,9 @@ body {
 }
 .create-mail .create-mail-mainpart .form-container form .statues-mail .statues-mail-item {
   width: 45%;
+}
+.create-mail .create-mail-mainpart .form-container form .statues-mail .statues-mail-item input {
+  background-color: #F8F8F8;
 }
 .create-mail .create-mail-mainpart .form-container form .statues-mail #staticBackdrop .modal-dialog {
   max-width: 900px;

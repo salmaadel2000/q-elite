@@ -161,7 +161,7 @@
                                 transition: background-color 0.3s ease;
 
                                 &:checked {
-                                    background-color: $dark-green;
+                                    background-color: #12B76A;
                                 }
 
                                 &:checked::before {
@@ -196,7 +196,7 @@
                             border-radius: 5px;
                             font-size: 14px;
                             resize: none;
-
+                               background-color: #F8F8F8;
                             &::placeholder {
                                 color: black;
                                 font-size: 14px;
@@ -251,7 +251,7 @@
                             transition: background-color 0.3s ease;
 
                             &:checked {
-                                background-color:$dark-green;
+                                background-color:#12B76A;
                             }
 
                             &:checked::before {
@@ -274,6 +274,9 @@
 
                     .statues-mail-item {
                         width: 45%;
+                        input{
+                            background-color: #F8F8F8;
+                        }
                     }
 
                     #staticBackdrop {
