@@ -254,6 +254,7 @@ body {
 }
 .container-fluid .parent .sidebar.collapsed .sidebar-ul .nav-item {
   width: 76%;
+  margin-inline-start: 8px;
 }
 .container-fluid .parent .sidebar.collapsed .sidebar-ul .nav-item .collapse,
 .container-fluid .parent .sidebar.collapsed .sidebar-ul .nav-item .card {
@@ -262,6 +263,7 @@ body {
 .container-fluid .parent .sidebar.collapsed .sidebar-ul .nav-item .hover-content {
   position: absolute;
   right: 100%;
+  margin-inline-start: 5px;
   top: 0;
   display: none;
   width: 200px;
@@ -304,6 +306,9 @@ body {
 }
 
 @media (max-width: 1200px) {
+  .container-fluid .logo {
+    margin-inline-start: 0px;
+  }
   .container-fluid .parent {
     flex-direction: column;
     height: 100% !important;
@@ -974,7 +979,7 @@ body {
   }
 }
 .create-mail .create-mail-container {
-  padding: 10px 0px;
+  padding-block-end: 1rem;
 }
 .create-mail .create-mail-container .create-mail-ul {
   display: flex;
@@ -1664,6 +1669,7 @@ body {
   }
 }
 .archieve .archieve-container {
+  padding-block-end: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1709,7 +1715,6 @@ body {
 .archieve .archieve-container .toggle-container {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
 }
 .archieve .archieve-container .toggle-container label {
   margin-left: 10px;
@@ -2013,7 +2018,7 @@ body {
     justify-content: space-between;
   }
   .archieve .archieve-main .sec-container .page-archieve .pagination .page-item {
-    width: 50%;
+    width: 37%;
   }
 }
 @media (max-width: 600px) {
@@ -2035,12 +2040,15 @@ body {
   }
   .archieve .archieve-main .sec-container .page-archieve .pagination {
     flex-direction: column;
+    align-items: flex-start;
   }
   .archieve .archieve-main .sec-container .page-archieve .pagination .page-item {
-    width: 80%;
+    width: 65%;
+    padding-block-end: 0px;
   }
 }
 .human .human-container {
+  padding-block-end: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -2105,7 +2113,7 @@ body {
   color: #41843A;
 }
 .human .back-human {
-  padding: 10px 16px;
+  padding-inline: 5px;
   font-size: 14px;
   font-weight: 700;
   color: #41843A;
@@ -2116,7 +2124,6 @@ body {
   border-radius: 6px;
   cursor: pointer;
   transition: 1s all ease-in;
-  margin-bottom: 15px;
 }
 .human .back-human .back-text {
   margin: 0;
@@ -2195,7 +2202,7 @@ body {
 .human .human-main .tab-content {
   padding: 20px;
   border-top: none;
-  max-height: 220px;
+  max-height: 490px;
   overflow-y: auto;
   scrollbar-width: thin;
   scroll-behavior: smooth;
@@ -2207,6 +2214,15 @@ body {
 .human .human-main .tab-content::-webkit-scrollbar-thumb {
   background-color: #B1B1B1;
   border-radius: 10px;
+}
+.human .human-main .tab-content .default-img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+.human .human-main .tab-content .tab-pane:has(*:not(img)) .default-img {
+  display: none;
 }
 .human .human-main .tab-content .questions {
   display: flex;
@@ -2272,7 +2288,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  width: 50%;
+  width: 77%;
   margin-block: 10px;
 }
 .human .human-main .tab-content .questions .question-one .form-check .form-check-input,
@@ -2313,7 +2329,7 @@ body {
   line-height: 1.5;
   padding-block: 30px;
 }
-@media (max-width: 1000px) {
+@media (max-width: 770px) {
   .human .human-main .nav-tabs .nav-link {
     padding: 8px;
     font-size: 0.9rem;

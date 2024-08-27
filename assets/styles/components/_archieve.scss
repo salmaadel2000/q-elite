@@ -1,6 +1,6 @@
 .archieve {
     .archieve-container {
-      
+        padding-block-end: 1rem;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -55,8 +55,6 @@
         .toggle-container {
             display: flex;
             align-items: center;
-            margin-bottom: 10px;
-
             label {
                 margin-left: 10px;
                 font-size: 12px;
@@ -469,7 +467,7 @@
                 .page-archieve {
                     .pagination {
                         .page-item {
-                            width: 50%;
+                            width: 37%;
 
                             .page-link {}
                         }
@@ -516,9 +514,10 @@
                 .page-archieve {
                     .pagination {
                         flex-direction: column;
-
+                         align-items: flex-start;
                         .page-item {
-                            width: 80%;
+                            width: 65%;
+                            padding-block-end: 0px;
                         }
                     }
                 }
