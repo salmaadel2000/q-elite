@@ -195,6 +195,9 @@ body {
   display: none;
   border-radius: 8px;
 }
+.master-dashboard .parent .sidebar .nav-item .hover-content a:first-of-type {
+  margin-block-end: 5px;
+}
 .master-dashboard .parent .sidebar .nav-item .hover-content.card-hover {
   border: none;
   text-align: start;

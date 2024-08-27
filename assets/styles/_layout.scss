@@ -234,7 +234,9 @@ body {
                 .hover-content {
                     display: none; // Initially hidden
                     border-radius: 8px;
-    
+                    a:first-of-type{
+                        margin-block-end: 5px;
+                    }
                     &.card-hover {
                         border: none;
                         text-align: start;
