@@ -1889,7 +1889,6 @@ body {
   font-size: 16px;
   font-weight: 400;
   padding-block: 15px;
-  text-align: center;
   border-bottom-width: 0px;
 }
 .archieve .archieve-main .sec-container .table tbody td .open-col {
@@ -1919,6 +1918,9 @@ body {
 .archieve .archieve-main .sec-container .table tbody .tr-archieve[aria-expanded=false] .close-col {
   display: block;
   cursor: pointer;
+}
+.archieve .archieve-main .sec-container .table tbody .details {
+  padding-inline-start: 45px;
 }
 .archieve .archieve-main .sec-container .page-archieve {
   width: 100%;
