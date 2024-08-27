@@ -95,7 +95,7 @@ body {
     }
 }
 
-.container-fluid {
+.master-dashboard {
     padding: 0px;
     overflow: hidden;
     .name {
@@ -155,7 +155,7 @@ body {
                                 color: white !important; // Change icon color on hover
                             }
 
-                            .nav-link {
+                            .nav-link ,.nav-new{
                                 color: white; // Change link color on hover              
                             }
 
@@ -200,11 +200,11 @@ body {
                     width: 90%; // Set width for drop-img
                 }
 
-                .collapse {
+                .collapse-master{
                     .card {
                         border: none;
                         text-align: start;
-
+                         
                         .dropdown-item {
                             color: $light-gray;
                             font-size: 15px;
@@ -312,7 +312,7 @@ body {
                     .nav-item {
                         width: 76%;
                         margin-inline-start: 8px;
-                        .collapse,
+                        .collapse-master,
                         .card {
                             display: none !important;
                         }
@@ -379,7 +379,7 @@ body {
 }
 
 @media (max-width:1200px) {
-    .container-fluid {
+    .master-dashboard {
         .logo{
             margin-inline-start: 0px;
         }
@@ -443,7 +443,7 @@ body {
 }
 
 @media (max-width:770px) {
-    .container-fluid {
+    .master-dashboard {
         .parent {
             height: 100% !important;
 

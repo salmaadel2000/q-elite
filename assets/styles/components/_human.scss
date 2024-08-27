@@ -254,7 +254,6 @@
                         position: relative;
                         background-color: transparent;
                         margin-right: 8px; // Space between radio and label
-                    
                         &:checked {
                             background-color: #41843A; // Green background color when selected
                             border-color: #41843A; // Match the border color with the background
@@ -274,6 +273,10 @@
                     
                     .form-check-label {
                         cursor: pointer; // Ensures the label is clickable
+                    }
+                    .form-check{
+                        padding-right: 0px;
+                        padding-inline-end: 1em;
                     }
                     
 
