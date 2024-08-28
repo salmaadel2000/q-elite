@@ -1920,7 +1920,7 @@ body {
   cursor: pointer;
 }
 .archieve .archieve-main .sec-container .table tbody .details {
-  padding-inline-start: 45px;
+  text-align: center;
 }
 .archieve .archieve-main .sec-container .page-archieve {
   width: 100%;
